@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.ipad.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iPad Pro Series</h2>
+    <img src="../../img/iPad_Pro_12.9.jpg" alt="iPad Pro image" />
+    <h3>History</h3>
+    <h1>iPad Pro — The Evolution of the Professional Tablet</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>iPad Pro (1st generation):</strong> September 9, 2015</li>
+        <li><strong>iPad Pro (2nd generation):</strong> June 5, 2017</li>
+        <li><strong>iPad Pro (3rd generation):</strong> October 30, 2018</li>
+        <li><strong>iPad Pro (4th generation):</strong> March 18, 2020</li>
+        <li><strong>iPad Pro (5th generation):</strong> April 20, 2021</li>
+        <li><strong>iPad Pro (6th generation):</strong> October 26, 2022</li>
+        <li><strong>iPad Pro (7th generation):</strong> May 15, 2024</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Apple M4 chip: 10-core CPU and GPU</li>
+        <li>Ultra Retina XDR OLED display, up to 1600 nits</li>
+        <li>Supports Apple Pencil Pro and Magic Keyboard</li>
+        <li>USB-C with Thunderbolt 3</li>
+        <li>Storage options: 256GB / 512GB / 1TB / 2TB</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Model Comparison</h2>
+      <ul>
+        <li><strong>11-inch:</strong> Compact and lightweight</li>
+        <li><strong>13-inch:</strong> Larger screen for creativity</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Reviews and Reception</h2>
+      <p>iPad Pro is praised for its exceptional performance and professional capabilities. It's a full-featured tool for designers, musicians, engineers, and business professionals.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: iPad Pro, USB-C cable, adapter</li>
+        <li>Optional: Apple Pencil Pro, Magic Keyboard</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Credits</h2>
+    <h3>FujiTeam — concept, design, development, writing.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: School-Gymnasium named after Sh. Murtaza</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

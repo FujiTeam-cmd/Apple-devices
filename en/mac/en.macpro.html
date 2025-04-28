@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.mac.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Mac Pro Series</h2>
+    <img src="../../img/macpro.jpg" alt="Mac Pro image" />
+    <h3>History</h3>
+    <h1>Mac Pro — Unmatched Performance</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>First Mac Pro:</strong> August 7, 2006</li>
+        <li><strong>Mac Pro (2013):</strong> June 10, 2013</li>
+        <li><strong>Mac Pro (2019):</strong> December 10, 2019</li>
+        <li><strong>Mac Pro (Apple Silicon):</strong> TBA</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Apple Silicon chips (upcoming versions)</li>
+        <li>Up to 1.5TB of memory</li>
+        <li>Expandable storage options</li>
+        <li>8K video editing support</li>
+        <li>Modular design with PCIe expansion</li>
+        <li>Multiple graphics card support</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Performance and Use Cases</h2>
+      <p>The Mac Pro is ideal for professionals in fields like video production, music production, and scientific computing, offering incredible performance and expandability in a tower form factor.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>Widely praised for its power and modularity, the Mac Pro is the go-to machine for professionals needing extreme performance for heavy workloads.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: Mac Pro tower, power cable</li>
+        <li>Optional: Display, Magic Mouse, Magic Keyboard, additional storage options</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Authors</h2>
+    <h3>FujiTeam — idea, content, coding, visual design.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: Sh.Murtaza Gymnasium School</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

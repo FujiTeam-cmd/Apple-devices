@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.mac.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>MacBook Pro Series</h2>
+    <img src="../../img/macbookpro.jpg" alt="MacBook Pro image" />
+    <h3>History</h3>
+    <h1>MacBook Pro — Power for Professionals</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>First MacBook Pro:</strong> January 10, 2006</li>
+        <li><strong>MacBook Pro (M1):</strong> November 10, 2020</li>
+        <li><strong>MacBook Pro (14/16-inch, M1 Pro/Max):</strong> October 18, 2021</li>
+        <li><strong>MacBook Pro (M3 Series):</strong> October 30, 2023</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Apple M1, M2, and M3 chip options</li>
+        <li>14-inch and 16-inch Liquid Retina XDR displays</li>
+        <li>ProMotion (120Hz refresh rate)</li>
+        <li>Multiple Thunderbolt 4 ports, HDMI, SD card slot</li>
+        <li>Up to 22 hours battery life</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Performance and Use Cases</h2>
+      <p>Built for creative professionals, developers, and power users, the MacBook Pro offers desktop-class performance in a portable form factor.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>Highly rated for its incredible performance, display quality, and port variety. A favorite among video editors, coders, and music producers.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: MacBook Pro, MagSafe cable, 67W–140W power adapter</li>
+        <li>Optional: Magic Mouse, Magic Keyboard, external displays</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Authors</h2>
+    <h3>FujiTeam — idea, content, coding, visual design.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thanks for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: Sh.Murtaza Gymnasium School</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

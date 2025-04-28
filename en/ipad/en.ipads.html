@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.ipad.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iPad Series (Standard)</h2>
+    <img src="../../img/ipad11.jpg" alt="Image of standard iPad" class="img" />
+    <h3>History</h3>
+    <h1>iPad — The Classic Apple Tablet Lineup</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>iPad (1st generation):</strong> January 27, 2010</li>
+        <li><strong>iPad (5th generation):</strong> March 21, 2017</li>
+        <li><strong>iPad (6th generation):</strong> March 27, 2018</li>
+        <li><strong>iPad (7th generation):</strong> September 10, 2019</li>
+        <li><strong>iPad (8th generation):</strong> September 15, 2020</li>
+        <li><strong>iPad (9th generation):</strong> September 14, 2021</li>
+        <li><strong>iPad (10th generation):</strong> October 18, 2022</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>A13 or A14 Bionic chip (depending on generation)</li>
+        <li>10.2 or 10.9-inch Retina display</li>
+        <li>Touch ID</li>
+        <li>Support for Apple Pencil (1st generation)</li>
+        <li>USB-C (from 10th generation)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Affordability and Versatility</h2>
+      <p>The iPad is Apple’s most affordable tablet, perfect for education, everyday use, work, and entertainment. Its simplicity makes it ideal for beginners.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>The classic iPad remains the most popular choice due to its price, reliability, and familiar interface. It is recommended by schools, families, and individual users alike.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: iPad, USB-C / Lightning cable, power adapter</li>
+        <li>Optional: Apple Pencil, Smart Keyboard</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Credits</h2>
+    <h3>FujiTeam — text, structure, coding, visualization.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your interest!</h3>
+  </div>
+
+  <footer>
+    <p>Contact: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: School-Gymnasium named after Sh. Murtaza</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

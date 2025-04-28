@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+   
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+    }
+
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+    
+    img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    li {
+        width: 102%;
+    }
+    .highlight {
+      background-color: rgba(9, 255, 0, 0.548);
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../en.main.html">Main</button>
+                <button class="text-btn" data-url="../iphone/en.iphone.html">iPhone</button>
+                <button class="errbtn" onclick="toggleMenu()">iPad</button>
+                <div align="center" id="menu" class="hidden">You are alredy on Ipad page</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../mac/en.mac.html">Mac</button>
+                <button class="text-btn" data-url="../watch/en.watch.html">Watch</button>
+                <button class="text-btn" data-url="../airpods/en.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="../en.profile.html">Profile</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Search Apple devices" style="font-family: monospace;">
+                <button onclick="searchName()">Search</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="en.ipadpro.html"><img src="../../img/iPad_Pro_12.9.jpg" align="left"/><h2>iPad Pro Series</h2><h4>Display: 11" – 12.9" Liquid Retina<br>Processor: M1 – M4<br>Features: Face ID, ProMotion 120Hz, USB-C, Magic Keyboard support, Apple Pencil 2</h4></button></li>
+            <li><button class="maindiv1" data-url="en.ipadair.html"><img src="../../img/ipadair.jpg" align="left"/><h2>iPad Air Series</h2><h4>Display: 10.5" – 10.9" Liquid Retina<br>Processor: A14 – M2<br>Features: Touch ID (on button), USB-C, Apple Pencil 2 support</h4></button></li>
+            <li><button class="maindiv1" data-url="en.ipadmini.html"><img src="../../img/iPad_mini.jpg" align="left"/><h2>iPad mini Series</h2><h4>Display: 7.9" – 8.3" Liquid Retina<br>Processor: A12 – A15 Bionic<br>Features: Touch ID (on button), USB-C, Apple Pencil 2 support, ultra-compact design</h4></button></li>
+            <li><button class="maindiv1" data-url="en.ipads.html"><img src="../../img/ipad11.jpg" align="left"/><h2>iPad Series</h2><h4>Display: 9.7" – 10.2" Retina<br>Processor: A9 – A14 Bionic<br>Features: Touch ID, Lightning port, Apple Pencil 1 support, budget-friendly base model</h4></button></li>
+        </ul>
+    </div>
+    <script>
+        const button = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+     <script>
+        const buttons = 
+            document.querySelectorAll('.maindiv1').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.dataset.url;
+                window.location.href = url;
+            });
+        });
+
+        function searchName() {
+                    const query = document.getElementById("searchInput").value.trim();
+                    if (!query) return;
+                
+                    const regex = new RegExp(`(${query})`, "gi");
+                    const items = document.querySelectorAll("#nameList li");
+                    let firstMatch = null;
+                
+                    items.forEach(item => {
+                      removeHighlights(item);
+                      const matched = highlightMatches(item, regex);
+                      if (matched && !firstMatch) {
+                        firstMatch = item;
+                      }
+                    });
+                
+                    if (firstMatch) {
+                      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                  }
+                
+                  function removeHighlights(element) {
+                    const spans = element.querySelectorAll("span.highlight");
+                    spans.forEach(span => {
+                      span.replaceWith(span.textContent);
+                    });
+                  }
+                
+                  function highlightMatches(node, regex) {
+                    let found = false;
+                
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const match = node.textContent.match(regex);
+                      if (match) {
+                        const span = document.createElement("span");
+                        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+                        node.replaceWith(...span.childNodes);
+                        found = true;
+                      }
+                    }
+                    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+                      node.childNodes.forEach(child => {
+                        if (highlightMatches(child, regex)) {
+                          found = true;
+                        }
+                      });
+                    }
+                
+                    return found;
+                  }
+        </script>
+</body>
+</html>

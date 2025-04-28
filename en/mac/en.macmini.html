@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.mac.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Mac Mini Series</h2>
+    <img src="../../img/macmini.jpg" alt="Mac Mini image" />
+    <h3>History</h3>
+    <h1>Mac Mini — Compact Power</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>First Mac Mini:</strong> January 11, 2005</li>
+        <li><strong>Mac Mini (Intel):</strong> March 1, 2006</li>
+        <li><strong>Mac Mini (M1):</strong> November 10, 2020</li>
+        <li><strong>Mac Mini (M2):</strong> January 17, 2023</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Apple M1 and M2 chips (for 2020 and 2023 models)</li>
+        <li>Compact design (7.7 inches square and 1.4 inches tall)</li>
+        <li>Up to 64GB RAM and 2TB SSD storage</li>
+        <li>Thunderbolt / USB 4, HDMI 2.0, Gigabit Ethernet</li>
+        <li>Supports up to three displays (for M1 version)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Performance and Use Cases</h2>
+      <p>The Mac Mini is a small but powerful machine, suitable for home users, professionals, and developers who need strong performance in a compact form factor.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>Known for its impressive performance in such a small package, the Mac Mini is a favorite among users who want a powerful desktop without taking up too much space.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: Mac Mini, power cord</li>
+        <li>Optional: Keyboard, Mouse, external storage, monitors</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Authors</h2>
+    <h3>FujiTeam — idea, content, coding, visual design.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: Sh.Murtaza Gymnasium School</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

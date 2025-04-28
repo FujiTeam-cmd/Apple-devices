@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.mac.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iMac Series</h2>
+    <img src="../../img/imac.avif" alt="iMac image" />
+    <h3>History</h3>
+    <h1>iMac — All-in-One Powerhouse</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>First iMac:</strong> August 15, 1998</li>
+        <li><strong>iMac (Intel):</strong> January 7, 2009</li>
+        <li><strong>iMac (Retina 4K & 5K):</strong> October 13, 2015</li>
+        <li><strong>iMac (M1):</strong> April 20, 2021</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>Apple M1 chip (for 2021 model)</li>
+        <li>24-inch and 27-inch Retina 4K/5K displays</li>
+        <li>Up to 16GB RAM, 1TB SSD storage</li>
+        <li>Thin and elegant design with a variety of color options</li>
+        <li>Up to 10-core CPU and 8-core GPU</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Performance and Use Cases</h2>
+      <p>The iMac is perfect for creatives, professionals, and home users who need powerful computing in an elegant, space-saving all-in-one form factor.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>Praised for its stunning display, sleek design, and powerful performance. The iMac remains a top choice for users who want a reliable, stylish desktop computer.</p>
+    </section>
+
+    <section>
+      <h2>Box Contents and Accessories</h2>
+      <ul>
+        <li>Included: iMac, Magic Keyboard, Magic Mouse, power cable</li>
+        <li>Optional: Magic Trackpad, external storage devices</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Authors</h2>
+    <h3>FujiTeam — idea, content, coding, visual design.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: Sh.Murtaza Gymnasium School</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

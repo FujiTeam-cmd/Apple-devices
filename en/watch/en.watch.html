@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }    
+    
+    img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    li {
+        width: 102%;
+    }
+
+    .highlight {
+    background-color: rgba(9, 255, 0, 0.548);
+    font-weight: bold;
+  }
+
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../en.main.html">Main</button>
+                <button class="text-btn" data-url="../iphone/en.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="../ipad/en.ipad.html">iPad</button>
+                <button class="text-btn" data-url="../mac/en.mac.html">Mac</button>
+                <button class="errbtn" onclick="toggleMenu()">Watch</button>
+                <div align="center" id="menu" class="hidden">You are alredy on Watch page</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../airpods/en.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="../en.profile.html">Profile</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Search Apple devices" style="font-family: monospace;">
+                <button onclick="searchName()">Search</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="en.applewatch1.html"><img src="../../img/applew1st.jpg" align="left"/><h2>Apple Watch (1st generation)</h2><h4>Display: OLED<br>Features: First Apple Watch, basic fitness tracking</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries1.html"><img src="../../img/applew1.jpg" align="left"/><h2>Apple Watch Series 1</h2><h4>Display: OLED<br>Features: Faster processor, affordable entry</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries2.html"><img src="../../img/applew2.jpg" align="left"/><h2>Apple Watch Series 2</h2><h4>Display: OLED<br>Features: Built-in GPS, water resistance</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries3.html"><img src="../../img/applew3.jpg" align="left"/><h2>Apple Watch Series 3</h2><h4>Display: OLED<br>Features: Cellular option, improved performance</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries4.html"><img src="../../img/applew4.jpg" align="left"/><h2>Apple Watch Series 4</h2><h4>Display: Larger edge-to-edge OLED<br>Features: ECG, fall detection</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries5.html"><img src="../../img/applew5.png" align="left"/><h2>Apple Watch Series 5</h2><h4>Display: Always-On Retina<br>Features: Compass, international emergency calling</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries6.html"><img src="../../img/applew6.jpg" align="left"/><h2>Apple Watch Series 6</h2><h4>Display: Always-On Retina<br>Features: Blood oxygen sensor, faster charging</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries7.html"><img src="../../img/applew7.jpg" align="left"/><h2>Apple Watch Series 7</h2><h4>Display: Larger edge-to-edge<br>Features: Faster charging, crack-resistant front</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries8.html"><img src="../../img/applew8.jpg" align="left"/><h2>Apple Watch Series 8</h2><h4>Display: Always-On Retina<br>Features: Temperature sensing, crash detection</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries9.html"><img src="../../img/applew9.jpg" align="left"/><h2>Apple Watch Series 9</h2><h4>Display: Bright Always-On Retina<br>Features: Double Tap gesture, on-device Siri</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchseries10.html"><img src="../../img/applew10.jpg" align="left"/><h2>Apple Watch Series 10</h2><h4>Display: TBD<br>Features: Latest features and enhancements</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchse_1st.html"><img src="../../img/applewse1.jpg" align="left"/><h2>Apple Watch SE (1st generation)</h2><h4>Display: Retina<br>Features: Affordable, essential features</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchse_2nd.html"><img src="../../img/applewse2.jpg" align="left"/><h2>Apple Watch SE (2nd generation)</h2><h4>Display: Retina<br>Features: Enhanced performance, family setup</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchultra.html"><img src="../../img/applewul1.jpg" align="left"/><h2>Apple Watch Ultra</h2><h4>Display: Flat Sapphire Crystal<br>Features: Rugged design, extreme sports ready</h4></button></li>
+            <li><button class="maindiv1" data-url="en.applewatchultra2.html"><img src="../../img/applewul2.jpg" align="left"/><h2>Apple Watch Ultra 2</h2><h4>Display: Brightest Apple Watch display<br>Features: S9 chip, advanced GPS</h4></button></li>
+        </ul>            
+    </div>
+    <script>
+        const button = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+     <script>
+        const buttons = 
+            document.querySelectorAll('.maindiv1').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.dataset.url;
+                window.location.href = url;
+            });
+        });
+
+        function searchName() {
+                    const query = document.getElementById("searchInput").value.trim();
+                    if (!query) return;
+                
+                    const regex = new RegExp(`(${query})`, "gi");
+                    const items = document.querySelectorAll("#nameList li");
+                    let firstMatch = null;
+                
+                    items.forEach(item => {
+                      removeHighlights(item);
+                      const matched = highlightMatches(item, regex);
+                      if (matched && !firstMatch) {
+                        firstMatch = item;
+                      }
+                    });
+                
+                    if (firstMatch) {
+                      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                  }
+                
+                  function removeHighlights(element) {
+                    const spans = element.querySelectorAll("span.highlight");
+                    spans.forEach(span => {
+                      span.replaceWith(span.textContent);
+                    });
+                  }
+                
+                  function highlightMatches(node, regex) {
+                    let found = false;
+                
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const match = node.textContent.match(regex);
+                      if (match) {
+                        const span = document.createElement("span");
+                        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+                        node.replaceWith(...span.childNodes);
+                        found = true;
+                      }
+                    }
+                    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+                      node.childNodes.forEach(child => {
+                        if (highlightMatches(child, regex)) {
+                          found = true;
+                        }
+                      });
+                    }
+                
+                    return found;
+                  }
+        </script>
+</body>
+</html>

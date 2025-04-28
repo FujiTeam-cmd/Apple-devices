@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.mac.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>MacBook Series</h2>
+    <img src="../../img/macbook19.jpg" alt="MacBook Image" />
+    <h3>History</h3>
+    <h1>MacBook – The Powerful Laptop</h1>
+
+    <section>
+      <h2>Release Dates and Announcements</h2>
+      <ul>
+        <li><strong>MacBook (1st Generation):</strong> 16 May 2006</li>
+        <li><strong>MacBook (12-inch, 1st Generation):</strong> 9 March 2015</li>
+        <li><strong>MacBook (M1, 2020):</strong> 10 November 2020</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Main Features</h2>
+      <ul>
+        <li>Apple M1 or Intel Core processors (depending on the model)</li>
+        <li>Retina Display (12-inch option)</li>
+        <li>Magic Keyboard</li>
+        <li>USB-C/Thunderbolt ports</li>
+        <li>Long battery life</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Performance and Versatility</h2>
+      <p>The MacBook offers a slim design and portability while providing excellent performance with Apple's M1 chip. It is ideal for users who need a lightweight laptop for everyday tasks, light professional work, and entertainment.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Popularity</h2>
+      <p>MacBook is praised for its elegant design, fast performance, and efficient battery life. It’s a preferred option for students, professionals, and creatives who appreciate a minimalist, high-performance laptop.</p>
+    </section>
+
+    <section>
+      <h2>Packaging and Accessories</h2>
+      <ul>
+        <li>Included: MacBook, USB-C/Lightning Cable, Power Adapter</li>
+        <li>Optional Accessories: Apple Magic Mouse, Magic Trackpad, External Monitors, MacBook Sleeves</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Authors</h2>
+    <h3>FujiTeam — concept, design, development, text.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact: <a href="mail:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: 7 776 848 2309</p>
+    <p>Address: school-gymnasium named after Sh.Murtaza</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

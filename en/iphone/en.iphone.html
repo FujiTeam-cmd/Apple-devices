@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+    
+    img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    li {
+        width: 102%;
+    }
+
+    .highlight {
+      background-color: rgba(9, 255, 0, 0.548);
+      font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../en.main.html">Main</button>
+                <button class="errbtn" onclick="toggleMenu()">iPhone</button>
+                <div align="center" id="menu" class="hidden">You are alredy on Iphone page</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../ipad/en.ipad.html">iPad</button>
+                <button class="text-btn" data-url="../mac/en.mac.html">Mac</button>
+                <button class="text-btn" data-url="../watch/en.watch.html">Watch</button>
+                <button class="text-btn" data-url="../airpods/en.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="../en.profile.html">Profile</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Search Apple devices" style="font-family: monospace;">
+                <button onclick="searchName()">Search</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="en.iphone16s.html"><img src="../../img/iphone_16.jpg" align="left"/><h2>iPhone 16 Series</h2><h4>Display: 6.1" (16) – 6.7" (16 Plus, 16 Pro Max), OLED<br>Processor: A18 Bionic (all models), A18 Pro (in Pro and Pro Max)<br>Features: Wi-Fi 7, Action + Camera button, iOS 18, Apple Intelligence (with iOS 19)</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone15s.html"><img src="../../img/iphone_15.jpg" align="left"/><h2>iPhone 15 Series</h2><h4>Display: 6.1" (15, 15 Pro) – 6.7" (15 Plus, 15 Pro Max), OLED<br>Processor: A16 Bionic (15/15 Plus), A17 Pro (Pro/Pro Max)<br>Features: USB-C, titanium body (Pro), 5x zoom (Pro Max)</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone14s.html"><img src="../../img/iphone_14.jpg" align="left"/><h2>iPhone 14 Series</h2><h4>Display: 6.1" (14, 14 Pro) – 6.7" (14 Plus, 14 Pro Max), OLED<br>Processor: A15 Bionic (14/14 Plus), A16 Bionic (Pro/Pro Max)<br>Features: Always-On Display, Dynamic Island (Pro), satellite connectivity</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone13s.html"><img src="../../img/iphone_13.jpg" align="left"/><h2>iPhone 13 Series</h2><h4>Display: 5.4" (Mini) – 6.7" (Pro Max), OLED<br>Processor: A15 Bionic<br>Features: ProMotion 120Hz (Pro), Cinematic Mode</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone12s.html"><img src="../../img/iphone_12.jpg" align="left"/><h2>iPhone 12 Series</h2><h4>Display: 5.4" (Mini) – 6.7" (Pro Max), OLED<br>Processor: A14 Bionic<br>Features: 5G, MagSafe, flat design</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphonese2.html"><img src="../../img/iphone_se2.jpg" align="left"/><h2>iPhone SE (2nd generation)</h2><h4>Display: 4.7" Retina HD<br>Processor: A13 Bionic<br>Features: Touch ID, compact design, wireless charging support</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone11s.html"><img src="../../img/iphone_11.jpg" align="left"/><h2>iPhone 11 Series</h2><h4>Display: 6.1" LCD (11), 5.8" / 6.5" OLED (Pro/Pro Max)<br>Processor: A13 Bionic<br>Features: night mode, triple camera (Pro)</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphonexr.html"><img src="../../img/iphone_xr.jpg" align="left"/><h2>iPhone XR</h2><h4>Display: 6.1" LCD<br>Processor: A12 Bionic<br>Features: Face ID, variety of vibrant colors</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphonexs.html"><img src="../../img/iphone_xs.jpg" align="left"/><h2>iPhone XS Series</h2><h4>Display: 5.8" - 6.5" (Max) OLED<br>Processor: A12 Bionic<br>Features: Dual SIM support, improved camera</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphonex.html"><img src="../../img/iphone_X.jpg" align="left"/><h2>iPhone X</h2><h4>Display: 5.8" OLED<br>Processor: A11 Bionic<br>Features: Face ID, edge-to-edge screen, no Home button</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone8s.html"><img src="../../img/iphone_8.jpg" align="left"/><h2>iPhone 8 Series</h2><h4>Display: 4.7" - 5.5" Retina HD<br>Processor: A11 Bionic<br>Features: Touch ID, wireless charging, glass back</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphonese1.html"><img src="../../img/iphone_se.jpg" align="left"/><h2>iPhone SE (1st generation)</h2><h4>Display: 4" Retina<br>Processor: A9<br>Features: Touch ID, compact body, first with iOS 9</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone7s.html"><img src="../../img/iphone_7.jpg" align="left"/><h2>iPhone 7 Series</h2><h4>Display: 4.7" - 5.5" Retina HD<br>Processor: A10 Fusion<br>Features: water resistance, no 3.5mm headphone jack, dual camera (Plus)</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone6s.html"><img src="../../img/iphone_6.jpg" align="left"/><h2>iPhone 6 Series</h2><h4>Display: 4.7" - 5.5" Retina HD<br>Processor: A8<br>Features: improved camera, Apple Pay support</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone5s.html"><img src="../../img/iphone_5.jpg" align="left"/><h2>iPhone 5 Series</h2><h4>Display: 4" Retina<br>Processor: A6 - A7<br>Features: 5s: Touch ID, first 64-bit processor; 5c: plastic body, bright colors; 5: thinner design, improved camera</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone4s.html"><img src="../../img/iphone_4.jpg" align="left"/><h2>iPhone 4 Series</h2><h4>Display: 3.5" Retina<br>Processor: A4 - A5<br>Features: 4s: Siri, improved camera; 4: new design, first Retina display</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone3gs.html"><img src="../../img/iphone_3gs.jpg.webp" align="left"/><h2>iPhone 3GS</h2><h4>Display: 3.5" LCD<br>Processor: ARM Cortex-A8<br>Features: improved camera, video recording</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone3g.html"><img src="../../img/iphone_3g.jpg" align="left"/><h2>iPhone 3G</h2><h4>Display: 3.5" LCD<br>Processor: ARM 11<br>Features: 3G support, App Store</h4></button></li>
+            <li><button class="maindiv1" data-url="en.iphone1.html"><img src="../../img/iphone_1st.jpg" align="left"/><h2>iPhone (1st generation)</h2><h4>Display: 3.5" LCD<br>Processor: ARM 11<br>Features: first iPhone, only 2G network</h4></button></li>
+            </ul>
+    </div>
+    
+    <script>
+        const button = 
+        document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+    <script>
+    const buttons = 
+        document.querySelectorAll('.maindiv1').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+
+    function searchName() {
+    const query = document.getElementById("searchInput").value.trim();
+    if (!query) return;
+
+    const regex = new RegExp(`(${query})`, "gi");
+    const items = document.querySelectorAll("#nameList li");
+    let firstMatch = null;
+
+    items.forEach(item => {
+      removeHighlights(item);
+      const matched = highlightMatches(item, regex);
+      if (matched && !firstMatch) {
+        firstMatch = item;
+      }
+    });
+
+    if (firstMatch) {
+      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+
+  function removeHighlights(element) {
+    const spans = element.querySelectorAll("span.highlight");
+    spans.forEach(span => {
+      span.replaceWith(span.textContent);
+    });
+  }
+
+  function highlightMatches(node, regex) {
+    let found = false;
+
+    if (node.nodeType === Node.TEXT_NODE) {
+      const match = node.textContent.match(regex);
+      if (match) {
+        const span = document.createElement("span");
+        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+        node.replaceWith(...span.childNodes);
+        found = true;
+      }
+    }
+    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+      node.childNodes.forEach(child => {
+        if (highlightMatches(child, regex)) {
+          found = true;
+        }
+      });
+    }
+
+    return found;
+  }
+    </script>
+</body>
+</html>

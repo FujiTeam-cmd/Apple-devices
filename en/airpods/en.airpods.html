@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+        
+    img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    li {
+        width: 102%;
+    }
+
+    .highlight {
+    background-color: rgba(9, 255, 0, 0.548);
+    font-weight: bold;
+  }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../en.main.html">Main</button>
+                <button class="text-btn" data-url="../iphone/en.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="../ipad/en.ipad.html">iPad</button>
+                <button class="text-btn" data-url="../mac/en.mac.html">Mac</button>
+                <button class="text-btn" data-url="../watch/en.watch.html">Watch</button>
+                <button class="errbtn" onclick="toggleMenu()">AirPods</button>
+                <div align="center" id="menu" class="hidden">You are alredy on AirPods page</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../en.profile.html">Profile</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Search Apple devices" style="font-family: monospace;">
+                <button onclick="searchName()">Search</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="en.airpods1.html"><img src="../../img/air1.jpeg" align="left"/><h2>AirPods (1st generation)</h2><h4>Features: Wireless audio, automatic pairing</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpods2.html"><img src="../../img/air2.jpg" align="left"/><h2>AirPods (2nd generation)</h2><h4>Features: "Hey Siri" support, improved battery life</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpods3.html"><img src="../../img/air3.jpg" align="left"/><h2>AirPods (3rd generation)</h2><h4>Features: Spatial Audio, sweat and water resistance</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpods4.html"><img src="../../img/air4.jpg" align="left"/><h2>AirPods (4th generation)</h2><h4>Features: Latest design, enhanced audio performance</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpodspro1.html"><img src="../../img/airpro1.jpg" align="left"/><h2>AirPods Pro (1st generation)</h2><h4>Features: Active Noise Cancellation, Transparency mode</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpodspro2.html"><img src="../../img/airpro2.jpg" align="left"/><h2>AirPods Pro (2nd generation)</h2><h4>Features: H2 chip, improved noise cancellation</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpodspro3.html"><img src="../../img/airpro3.jpg" align="left"/><h2>AirPods Pro (3rd generation)</h2><h4>Features: Next-gen audio, adaptive sound</h4></button></li>
+            <li><button class="maindiv1" data-url="en.airpodsmax.html"><img src="../../img/airmax.jpg" align="left"/><h2>AirPods Max</h2><h4>Features: Over-ear design, high-fidelity sound, ANC</h4></button></li>
+        </ul>
+    </div>
+    <script>
+        const button = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+     <script>
+        const buttons = 
+            document.querySelectorAll('.maindiv1').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.dataset.url;
+                window.location.href = url;
+            });
+        });
+
+        function searchName() {
+                    const query = document.getElementById("searchInput").value.trim();
+                    if (!query) return;
+                
+                    const regex = new RegExp(`(${query})`, "gi");
+                    const items = document.querySelectorAll("#nameList li");
+                    let firstMatch = null;
+                
+                    items.forEach(item => {
+                      removeHighlights(item);
+                      const matched = highlightMatches(item, regex);
+                      if (matched && !firstMatch) {
+                        firstMatch = item;
+                      }
+                    });
+                
+                    if (firstMatch) {
+                      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                  }
+                
+                  function removeHighlights(element) {
+                    const spans = element.querySelectorAll("span.highlight");
+                    spans.forEach(span => {
+                      span.replaceWith(span.textContent);
+                    });
+                  }
+                
+                  function highlightMatches(node, regex) {
+                    let found = false;
+                
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const match = node.textContent.match(regex);
+                      if (match) {
+                        const span = document.createElement("span");
+                        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+                        node.replaceWith(...span.childNodes);
+                        found = true;
+                      }
+                    }
+                    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+                      node.childNodes.forEach(child => {
+                        if (highlightMatches(child, regex)) {
+                          found = true;
+                        }
+                      });
+                    }
+                
+                    return found;
+                  }
+        </script>
+</body>
+</html>

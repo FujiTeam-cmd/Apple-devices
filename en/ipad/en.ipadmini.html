@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="en.ipad.html">Back</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iPad mini Series</h2>
+    <img src="../../img/iPad_mini.jpg" alt="iPad mini image" />
+    <h3>History</h3>
+    <h1>iPad mini — Compact and Powerful</h1>
+
+    <section>
+      <h2>Announcements and Release Dates</h2>
+      <ul>
+        <li><strong>iPad mini (1st generation):</strong> October 23, 2012</li>
+        <li><strong>iPad mini 2:</strong> October 22, 2013</li>
+        <li><strong>iPad mini 3:</strong> October 16, 2014</li>
+        <li><strong>iPad mini 4:</strong> September 9, 2015</li>
+        <li><strong>iPad mini (5th generation):</strong> March 18, 2019</li>
+        <li><strong>iPad mini (6th generation):</strong> September 14, 2021</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Key Features</h2>
+      <ul>
+        <li>A15 Bionic chip (6th generation)</li>
+        <li>8.3-inch Liquid Retina display</li>
+        <li>Touch ID in the power button</li>
+        <li>Support for Apple Pencil (2nd generation)</li>
+        <li>USB-C port</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Form Factor and Usability</h2>
+      <p>The iPad mini is valued for its portability, lightweight design, and powerful performance in a compact body. It's ideal for reading, taking notes, and travel.</p>
+    </section>
+
+    <section>
+      <h2>Reviews and Usage</h2>
+      <p>Users and critics note that the iPad mini combines the performance of larger models with the convenience of a smartphone. It’s a versatile tool for students, doctors, and travelers alike.</p>
+    </section>
+
+    <section>
+      <h2>Package Contents and Accessories</h2>
+      <ul>
+        <li>Included: iPad mini, USB-C cable, power adapter</li>
+        <li>Optional: Apple Pencil (2nd generation), cases</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Credits</h2>
+    <h3>FujiTeam — concept, text, layout, coding, visualization.</h3>
+    <h3>Source — Apple Inc.</h3>
+    <h3>Thank you for your attention!</h3>
+  </div>
+
+  <footer>
+    <p>Contact: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: School-gymnasium named after Sh. Murtaza</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

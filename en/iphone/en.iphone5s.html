@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+        width: 25%;
+        height: auto;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="en.iphone.html">Back</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>iPhone 5 Series</h2>
+        <img src="../../img/iphone_5.jpg" />
+        <h4 align="right"></h4>
+        <h3>History</h3>
+        <h1>iPhone 5 — Creation History</h1>
+    
+        <section>
+            <h2>Announcement and Release Date</h2>
+            <ul>
+                <li><strong>Announcement:</strong> September 12, 2012, Yerba Buena Center, San Francisco</li>
+                <li><strong>Release Date:</strong> September 21, 2012</li>
+                <li><strong>Key Speakers:</strong> Tim Cook, Phil Schiller</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Model Overview</h2>
+            <ul>
+                <li>4" Retina display</li>
+                <li>A6 chip</li>
+                <li>8MP camera with enhanced image stabilization</li>
+                <li>Supports 4G LTE</li>
+                <li>Thin and lightweight aluminum body</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Larger screen size (first iPhone with a 4-inch display)</li>
+                <li>Lightning port instead of the 30-pin connector</li>
+                <li>New A6 chip</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Reviews and Reception</h2>
+            <p>The iPhone 5 received positive reviews for its performance, improved camera, and thin design. However, many users expressed dissatisfaction with the new Lightning connector, which required an adapter to work with older accessories.</p>
+        </section>
+    
+        <section>
+            <h2>Box Contents</h2>
+            <ul>
+                <li>Included: iPhone 5, Lightning cable, power adapter, EarPods with 3.5mm jack</li>
+                <li>Optional: cases, charging accessories</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px; margin-bottom: 10px;"><h2>Credits</h2><h3>FujiTeam-concept, design, writing, development, coding, tech support.</h3><h3>Source-Apple Corporation</h3><h3>Thanks for support!</h3></div><!-- AUTHORS -->
+    <footer><p>Contact Us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Phone: +8 776 848 2309</p>
+        <p>Address: school-gymnasium named after Sh.Murtaza</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

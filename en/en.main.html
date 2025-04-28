@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    button:hover {
+        filter: brightness(200%);
+    }
+
+    .head {
+        display: flex;
+        justify-content: left;
+        gap: 10%;
+        padding: 0.5%;
+    }
+
+    ul {
+        align-items: center;
+        margin-left: 2.5%;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 2%;
+        border: 1px solid #ccc;
+        width: 10%;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+
+    .news {
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width:225px;
+        height:350px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+    }
+
+    .why {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 205px;
+        height:350px;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="errbtn" onclick="toggleMenu()">Main</button>
+                    <div align="center" id="menu" class="hidden">You are alredy on main page</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="iphone/en.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="ipad/en.ipad.html">iPad</button>
+                <button class="text-btn" data-url="mac/en.mac.html">Mac</button>
+                <button class="text-btn" data-url="watch/en.watch.html">Watch</button>
+                <button class="text-btn" data-url="airpods/en.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="en.profile.html">Profile</button>
+                <button class="text-btn" data-url="../en.minigame.html">Mini game</button>
+            </div>
+            <div class="head">
+                <button class="text-btn" data-url="../ru/ru.main.html">Ru</button>
+                <button class="text-btn" data-url="../kz/kz.main.html">Kz</button>
+              </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>Apple - where innovation meets simplicity</h2>
+        <video class="ip16" src="../img/iphone16.mp4" loop autoplay muted></video>
+        <h2>About Apple</h2>
+        <p>Apple is a leading technology company known for innovative products like the iPhone, Mac, and Apple Watch. Founded in 1976, Apple focuses on design, performance, and user experience. Its ecosystem of devices and services is used by millions worldwide.</p>
+    </div><!-- BRAND INFO -->
+    <div ><h2 align="center">News</h2>
+        <ul style="list-style-type: none; display: flex; margin: 10; padding-left: 0;">    
+            <li style="margin-right: 10px;">
+                <div class="news" style="padding:10px;"><img src="../img/airpodsmax.png" width="100%" height="auto"/><h4 fontcolor="gray">Update</h4><h3>Lossless audio and ultra-low latency audio come to to AirPods Max</h3><h4 fontcolor="gray">March 24, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">
+                <div class="news" style="padding:10px;"><img src="../img/m3.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Update</h4><h3>Apple reveals M3 Ultra, taking Apple silicon to a new extreme</h3><h4 fontcolor="gray">March 24, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><center><img src="../img/macstudio.png" width="70%" height="auto"/></center><h4 fontcolor="gray">Update</h4><h3>Apple unveils new Mac Studio, the most powerful Mac ever</h3><h4 fontcolor="gray">March 5, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><img src="../img/ipadair.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Update</h4><h3>Apple introduces iPad Air with powerful M3 chip and new Magic Keyboard</h3><h4 fontcolor="gray">March 4, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><img src="../img/macbook.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Update</h4><h3>Apple introduces the new MacBook Air with the M4 chip and sky blue color</h3><h4 fontcolor="gray">March 5, 2025</h4></div>
+            </li>
+        </ul>
+    </div><!-- NEWS -->
+
+        <h2 align="center">Why Apple?</h2>
+        <ul style="list-style-type: none; display: flex; margin: 10; padding-left: 0;">
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/ios.jpg" width="100%" height="auto"/><h3>Ease of use</h3><h4>Intuitive interface and seamless ecosystem</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/251.png" width="100%" height="auto"/><h3>High build quality</h3><h4>Durable, premium materials and stylish design</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/sync.jpg" width="100%" height="auto"/><h3>Device synchronization</h3><h4> Easy interaction between Apple products</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/sec2.png" width="100%" height="auto"/><h3>Security and privacy</h3><h4>Strong data protection mechanisms and security updates</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/inno.png" width="100%" height="auto"/><h3>Innovative technologies</h3><h4>New features like Face ID, the m3,m4 chips and advanced cameras</h4></div></li>
+        </ul>
+    <!-- WHY APPLE? -->
+   
+    <div class="maindiv" style="height: 200px; margin-bottom: 10px;"><h2>Credits</h2><h3>FujiTeam-concept, design, writing, development, coding, tech support.</h3><h3>Source-Apple Corporation</h3><h3>Thanks for support!</h3></div><!-- AUTHORS -->
+    <footer><p>Contact Us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Phone: +8 776 848 2309</p>
+        <p>Address: school-gymnasium named after Sh.Murtaza</p>
+        <button class="text-btn" data-url="../en.interview.html">Interview</button>
+    </footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+  
+    </script>
+</body>
+</html>
