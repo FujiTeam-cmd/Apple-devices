@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Собери свой iPhone</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 30px;
+    }
+    .parts {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .part {
+      border: 2px dashed #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background: #fff;
+      width: 200px;
+      cursor: pointer;
+    }
+    .assembled {
+      margin-top: 30px;
+    }
+    #helloScreen {
+      display: none;
+      font-size: 24px;
+      font-weight: bold;
+      color: #007aff;
+      margin-top: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Собери свой iPhone</h1>
+
+  <div class="parts">
+    <div class="part" onclick="selectPart('body')">Корпус</div>
+    <div class="part" onclick="selectPart('chip')">Процессор</div>
+    <div class="part" onclick="selectPart('camera')">Камера</div>
+    <div class="part" onclick="selectPart('screen')">Экран</div>
+    <div class="part" onclick="selectPart('logo')">Логотип Apple</div>
+  </div>
+
+  <div class="assembled">
+    <p>Выбрано: <span id="selectedParts">пока ничего</span></p>
+    <div id="helloScreen">Hello / Здравствуйте / Bonjour / こんにちは / 안녕하세요</div>
+  </div>
+
+  <script>
+    const requiredParts = ['body', 'chip', 'camera', 'screen', 'logo'];
+    const selected = new Set();
+
+    function selectPart(part) {
+      selected.add(part);
+      document.getElementById("selectedParts").innerText = Array.from(selected).join(', ');
+      checkAssembly();
+    }
+
+    function checkAssembly() {
+      if (requiredParts.every(p => selected.has(p))) {
+        document.getElementById("helloScreen").style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
