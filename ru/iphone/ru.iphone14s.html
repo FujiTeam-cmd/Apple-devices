@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="ru.iphone.html">Назад</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>Серия iPhone 14</h2>
+        <img src="../../img/iphone_14.jpg" />
+        <h4 align="right"></h4>
+        <h3>История</h3>
+        <h1>История создания серии iPhone 14</h1>
+        
+        <section>
+            <h2>Анонс и дата выхода</h2>
+            <ul>
+                <li><strong>Анонс:</strong> 7 сентября 2022 года, Apple Park, Купертино</li>
+                <li><strong>Дата выхода:</strong> 16 сентября 2022 года (Pro), 7 октября (Plus)</li>
+                <li><strong>Основные спикеры:</strong> Тим Кук, Крейг Федериги</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Модели в линейке</h2>
+            <ul>
+                <li>iPhone 14 — 6.1", базовая модель</li>
+                <li>iPhone 14 Plus — 6.7", увеличенная модель</li>
+                <li>iPhone 14 Pro — 6.1", премиум</li>
+                <li>iPhone 14 Pro Max — 6.7", флагман</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Ключевые нововведения</h2>
+            <ul>
+                <li>Dynamic Island (Pro модели)</li>
+                <li>Новая 48MP камера (Pro модели)</li>
+                <li>Функция обнаружения ДТП</li>
+                <li>Satellite SOS — экстренная связь через спутник</li>
+                <li>A15 Bionic (14/14 Plus), A16 Bionic (Pro)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Отзывы и оценки</h2>
+            <p>iPhone 14 получил положительные отзывы за улучшенные камеры и безопасность, но базовые модели критиковались за малые изменения по сравнению с iPhone 13.</p>
+        </section>
+    
+        <section>
+            <h2>Комплектация и аксессуары</h2>
+            <ul>
+                <li>В комплекте: iPhone 14, кабель Lightning–USB-C, документация</li>
+                <li>Дополнительно: чехлы, зарядки, MagSafe аксессуары</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредиты</h2><h3>FujiTeam — концепция, дизайн, написание, разработка, кодирование, техническая поддержка.</h3><h3>Источник-Apple Corporation</h3><h3>Спасибо за поддержку!</h3></div><!-- AUTHORS -->
+    <footer><p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Номер телефона: +8 776 848 2309</p>
+        <p>Адрес: Школа-гимназия имени Шерхана Муртазы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

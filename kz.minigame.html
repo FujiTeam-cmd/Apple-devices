@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    }
+    header, footer, .maindiv, .news, .why {
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        padding: 2% 5%;
+        margin-bottom: 10px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        background: transparent;
+    }
+    button:hover {
+        filter: brightness(200%);
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .option-item {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        flex: 1 1 200px;
+        text-align: center;
+        user-select: none;
+    }
+    .option-item.selected {
+        background-color: #d0e6ff;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <button class="text-btn" data-url="kz/kz.main.html">Артқа</button>
+    </div>
+    <div class="head">
+        <h2>Құрылғы таңдау ойыны</h2>
+    </div>
+</header>
+
+<div class="maindiv">
+    <h2>Қалаған мүмкіндіктеріңізді таңдаңыз</h2>
+    <div class="options" id="options">
+        <div class="option-item" data-feature="battery">5000мАч+ батарея</div>
+        <div class="option-item" data-feature="screen">Үлкен экран</div>
+        <div class="option-item" data-feature="weight">Жеңіл салмақ</div>
+        <div class="option-item" data-feature="durability">Жоғары төзімділік</div>
+        <div class="option-item" data-feature="lifetime">Ұзақ қызмет ету мерзімі</div>
+        <div class="option-item" data-feature="updates">Ұзақ жаңарту қолдауы</div>
+        <div class="option-item" data-feature="multitasking">Көп тапсырмалы жұмыс</div>
+        <div class="option-item" data-feature="multifunctional">Көп функциялы</div>
+        <div class="option-item" data-feature="camera">Жоғары сапалы камера</div>
+        <div class="option-item" data-feature="memory">Үлкен жады</div>
+        <div class="option-item" data-feature="sound">Тамаша дыбыс</div>
+        <div class="option-item" data-feature="materials">Премиум материалдар</div>
+        <div class="option-item" data-feature="processor">Күшті процессор</div>
+        <div class="option-item" data-feature="performance">Жоғары өнімділік</div>
+        <div class="option-item" data-feature="price">Қолжетімді баға</div>
+        <div class="option-item" data-feature="rating">Жоғары рейтинг</div>
+        <div class="option-item" data-feature="ram">Көп жедел жады (RAM)</div>
+    </div>
+    <button onclick="suggestDevice()" style="margin-top: 20px; padding: 10px; background-color: #ccc; border-radius: 10px;">Құрылғыларды табу</button>
+    <div id="result"></div>
+</div>
+
+<footer>
+    <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Мекенжай: Ш.Мұртаза атындағы мектеп-гимназия</p>
+</footer>
+
+<script>
+
+const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+
+const options = document.querySelectorAll('.option-item');
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.toggle('selected');
+    });
+});
+
+function suggestDevice() {
+    const selected = document.querySelectorAll('.option-item.selected');
+    const features = Array.from(selected).map(opt => opt.dataset.feature);
+
+    let database = [
+        { name: "iPhone 16 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 16 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 16 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 16", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 15 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 15 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 15 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 15", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 14", features: ["price", "updates"] },
+        { name: "iPhone SE 3-ші буын", features: ["price", "performance", "updates"] },
+        { name: "iPad Pro M2", features: ["performance", "multitasking", "screen", "ram"] },
+        { name: "iPad Air M2", features: ["lightweight", "screen", "updates"] },
+        { name: "iPad 10-шы буын", features: ["price", "screen"] },
+        { name: "MacBook Pro 14 M3", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Pro 16 M3 Max", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Air M2", features: ["lightweight", "performance", "battery"] },
+        { name: "Mac Studio M2 Ultra", features: ["performance", "processor", "ram", "memory", "multifunctional"] },
+        { name: "Mac Mini M2", features: ["price", "performance"] },
+        { name: "Apple Watch Ultra 2", features: ["durability", "lifetime", "battery", "materials"] },
+        { name: "Apple Watch Series 9", features: ["updates", "durability"] },
+        { name: "AirPods Pro 2", features: ["sound", "durability"] },
+        { name: "AirPods Max", features: ["sound", "materials"] }
+    ];
+
+    let suggestions = database.filter(device =>
+        features.every(feature => device.features.includes(feature))
+    );
+
+    if (suggestions.length === 0) {
+        suggestions = database.filter(device =>
+            features.some(feature => device.features.includes(feature))
+        );
+    }
+
+    if (suggestions.length === 0) {
+        document.getElementById('result').innerText = "Идеал сәйкес құрылғы табылмады. Таңдауларыңызды азайтып көріңіз.";
+    } else {
+        document.getElementById('result').innerText = "Ұсынылған құрылғылар: " + suggestions.map(d => d.name).join(", ");
+    }
+}
+</script>
+
+</body>
+</html>

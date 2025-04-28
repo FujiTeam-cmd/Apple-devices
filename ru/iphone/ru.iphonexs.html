@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="ru.iphone.html">Назад</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>Серия iPhone XS</h2>
+        <img src="../../img/iphone_xs.jpg" />
+        <h4 align="right"></h4>
+        <h3>История</h3>
+        <h1>История создания серии iPhone XS</h1>
+    
+        <section>
+            <h2>Анонс и дата выхода</h2>
+            <ul>
+                <li><strong>Анонс:</strong> 12 сентября 2018 года, Steve Jobs Theater</li>
+                <li><strong>Дата выхода:</strong> 21 сентября 2018 года</li>
+                <li><strong>Основные спикеры:</strong> Тим Кук, Фил Шиллер</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Модели в линейке</h2>
+            <ul>
+                <li>iPhone XS — 5.8", OLED-дисплей</li>
+                <li>iPhone XS Max — 6.5", самый большой экран на тот момент</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Ключевые нововведения</h2>
+            <ul>
+                <li>Процессор A12 Bionic</li>
+                <li>Улучшенные двойные камеры с Smart HDR</li>
+                <li>Поддержка двух SIM (nano + eSIM)</li>
+                <li>Защита от воды и пыли (IP68)</li>
+                <li>Новый золотой цвет</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Отзывы и оценки</h2>
+            <p>Серия XS получила высокие оценки за производительность, качество дисплея и улучшенные камеры. XS Max особенно понравился фанатам больших экранов.</p>
+        </section>
+    
+        <section>
+            <h2>Комплектация и аксессуары</h2>
+            <ul>
+                <li>В комплекте: iPhone, зарядка, кабель Lightning, наушники EarPods</li>
+                <li>Дополнительно: чехлы, беспроводные зарядки</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредиты</h2><h3>FujiTeam — концепция, дизайн, написание, разработка, кодирование, техническая поддержка.</h3><h3>Источник-Apple Corporation</h3><h3>Спасибо за поддержку!</h3></div><!-- AUTHORS -->
+    <footer><p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Номер телефона: +8 776 848 2309</p>
+        <p>Адрес: Школа-гимназия имени Шерхана Муртазы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

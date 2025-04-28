@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    }
+    header, footer, .maindiv, .news, .why {
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        padding: 2% 5%;
+        margin-bottom: 10px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        background: transparent;
+    }
+    button:hover {
+        filter: brightness(200%);
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .option-item {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        flex: 1 1 200px;
+        text-align: center;
+        user-select: none;
+    }
+    .option-item.selected {
+        background-color: #d0e6ff;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <button class="text-btn" data-url="en/en.main.html">Back</button>
+    </div>
+    <div class="head">
+        <h2>Device Picker Game</h2>
+    </div>
+</header>
+
+<div class="maindiv">
+    <h2>Choose your preferred features</h2>
+    <div class="options" id="options">
+        <div class="option-item" data-feature="battery">Battery 5000mAh+</div>
+        <div class="option-item" data-feature="screen">Large screen</div>
+        <div class="option-item" data-feature="weight">Lightweight</div>
+        <div class="option-item" data-feature="durability">High durability</div>
+        <div class="option-item" data-feature="lifetime">Long lifespan</div>
+        <div class="option-item" data-feature="updates">Long update support</div>
+        <div class="option-item" data-feature="multitasking">Multitasking</div>
+        <div class="option-item" data-feature="multifunctional">Multifunctional</div>
+        <div class="option-item" data-feature="camera">High-quality camera</div>
+        <div class="option-item" data-feature="memory">Large memory</div>
+        <div class="option-item" data-feature="sound">Excellent sound</div>
+        <div class="option-item" data-feature="materials">Premium materials</div>
+        <div class="option-item" data-feature="processor">Powerful processor</div>
+        <div class="option-item" data-feature="performance">High performance</div>
+        <div class="option-item" data-feature="price">Affordable price</div>
+        <div class="option-item" data-feature="rating">High ratings</div>
+        <div class="option-item" data-feature="ram">High RAM</div>
+    </div>
+    <button onclick="suggestDevice()" style="margin-top: 20px; padding: 10px; background-color: #ccc; border-radius: 10px;">Find Devices</button>
+    <div id="result"></div>
+</div>
+
+<footer>
+    <p>Contact Us: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Phone: +8 776 848 2309</p>
+    <p>Address: school-gymnasium named after Sh.Murtaza</p>
+</footer>
+
+<script>
+
+const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+
+const options = document.querySelectorAll('.option-item');
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.toggle('selected');
+    });
+});
+
+function suggestDevice() {
+    const selected = document.querySelectorAll('.option-item.selected');
+    const features = Array.from(selected).map(opt => opt.dataset.feature);
+
+    let database = [
+        { name: "iPhone 16 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 16 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 16 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 16", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 15 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 15 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 15 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 15", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 14", features: ["price", "updates"] },
+        { name: "iPhone SE 3rd Gen", features: ["price", "performance", "updates"] },
+        { name: "iPad Pro M2", features: ["performance", "multitasking", "screen", "ram"] },
+        { name: "iPad Air M2", features: ["lightweight", "screen", "updates"] },
+        { name: "iPad 10th Gen", features: ["price", "screen"] },
+        { name: "MacBook Pro 14 M3", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Pro 16 M3 Max", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Air M2", features: ["lightweight", "performance", "battery"] },
+        { name: "Mac Studio M2 Ultra", features: ["performance", "processor", "ram", "memory", "multifunctional"] },
+        { name: "Mac Mini M2", features: ["price", "performance"] },
+        { name: "Apple Watch Ultra 2", features: ["durability", "lifetime", "battery", "materials"] },
+        { name: "Apple Watch Series 9", features: ["updates", "durability"] },
+        { name: "AirPods Pro 2", features: ["sound", "durability"] },
+        { name: "AirPods Max", features: ["sound", "materials"] }
+    ];
+
+    let suggestions = database.filter(device =>
+        features.every(feature => device.features.includes(feature))
+    );
+
+    if (suggestions.length === 0) {
+        suggestions = database.filter(device =>
+            features.some(feature => device.features.includes(feature))
+        );
+    }
+
+    if (suggestions.length === 0) {
+        document.getElementById('result').innerText = "No perfect match found. Try selecting fewer options.";
+    } else {
+        document.getElementById('result').innerText = "Suggested devices: " + suggestions.map(d => d.name).join(", ");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.mac.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия Mac Mini</h2>
+    <img src="../../img/macmini.jpg" alt="Изображение Mac Mini" />
+    <h3>История</h3>
+    <h1>Mac Mini — Компактная мощность</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>Первый Mac Mini:</strong> 11 января 2005 года</li>
+        <li><strong>Mac Mini (Intel):</strong> 1 марта 2006 года</li>
+        <li><strong>Mac Mini (M1):</strong> 10 ноября 2020 года</li>
+        <li><strong>Mac Mini (M2):</strong> 17 января 2023 года</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Чипы Apple M1 и M2 (для моделей 2020 и 2023 года)</li>
+        <li>Компактный дизайн (7.7 дюймов в ширину и 1.4 дюйма в высоту)</li>
+        <li>До 64 ГБ ОЗУ и до 2 ТБ SSD памяти</li>
+        <li>Порты Thunderbolt / USB 4, HDMI 2.0, Gigabit Ethernet</li>
+        <li>Поддержка до трех дисплеев (для модели с чипом M1)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и области применения</h2>
+      <p>Mac Mini — это небольшая, но мощная машина, подходящая для домашних пользователей, профессионалов и разработчиков, которым нужна высокая производительность в компактном корпусе.</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и популярность</h2>
+      <p>Известен своей впечатляющей производительностью в таком компактном корпусе, Mac Mini является любимцем пользователей, которые хотят мощный настольный компьютер без лишнего места.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: Mac Mini, силовой кабель</li>
+        <li>Дополнительно: клавиатура, мышь, внешние накопители, мониторы</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, контент, код, визуальный дизайн.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за внимание!</h3>
+  </div>
+
+  <footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: Ш.Муртаза Гимназия</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview</title>
+    <style>
+header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2% 5%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    font-family: monospace;
+  }
+  button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+    </style>
+</head>
+<body>
+    <header style="align-content: center;">
+    <div>
+        <button class="text-btn" data-url="en/en.main.html">Back</button>
+        <video style="display: block; margin: auto;" width="640" height="360" controls>
+            <source src="img/interview.mp4" type="video/mp4">
+            Error
+        </video>
+    </div>
+    </header>
+    <script>
+            const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+</body>
+</html>

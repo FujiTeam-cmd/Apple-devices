@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="kk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .text-btn {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .text-btn:hover {
+        filter: brightness(200%);
+    }
+
+    .text-btn1 {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .text-btn1:hover {
+        filter: brightness(200%);
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .mainbtn {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #ececec;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        border: 0px;
+    }
+    
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+    .specbtn {
+        border-radius: 5px;
+        width: fit-content;
+        background-color: #ccc;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="ru.main.html">Главная страница</button>
+                <button class="text-btn" data-url="iphone/ru.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="ipad/ru.ipad.html">iPad</button>
+                <button class="text-btn" data-url="mac/ru.mac.html">Mac</button>
+                <button class="text-btn" data-url="watch/ru.watch.html">Watch</button>
+                <button class="text-btn" data-url="airpods/ru.airpods.html">AirPods</button>
+                <button class="text-btn1" onclick="toggleMenu()">Профиль</button>
+                <div align="center" id="menu" class="hidden">Вы в странице профиля</div>
+                <script>
+                    function toggleMenu() {
+                        const menu = 
+                    document.getElementById("menu");
+                        menu.classList.toggle("hidden")
+                    }
+
+
+                    function toggleMenu() {
+                        const menu = 
+                    document.getElementById("menu");
+                        menu.classList.remove("hidden");
+                        setTimeout(() => {
+                            menu.classList.add("hidden");
+                        }, 3000);
+                    }
+                </script>
+            </div>
+            <script>
+                const buttons = 
+            document.querySelectorAll('.text-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const url = button.dataset.url;
+                    window.location.href = url;
+                });
+            });
+            </script>
+        </header>
+    </div>
+    <div class="maindiv">
+        <main style="font-family: monospace; padding: 40px; text-align: center;">
+    
+            <form id="registerForm" style="max-width: 400px; margin: 0 auto; display: none; flex-direction: column; gap: 15px;">
+              <input type="text" id="regName" placeholder="Имя" required>
+              <input type="text" id="regSurname" placeholder="Фамилия" required>
+              <input type="email" id="regEmail" placeholder="Эл. Почта" required>
+              <input type="text" id="regPassword" placeholder="Пароль" required>
+              <button class="mainbtn" type="button" onclick="register()" style="cursor: pointer;">Зарегистрироваться</button>
+            </form>
+          
+            <form id="loginForm" style="max-width: 400px; margin: 0 auto; display: none; flex-direction: column; gap: 15px;">
+              <input type="email" id="loginEmail" placeholder="Эл. Почта" required>
+              <input type="text" id="loginPassword" placeholder="Пароль" required>
+              <button class="mainbtn" type="button" onclick="login()" style="cursor: pointer;">Войти</button>
+            </form>
+          
+            <div id="authButtons" style="margin-top: 20px;">
+              <button class="mainbtn" onclick="showForm('register')" style="cursor: pointer;">Зарегистрироваться</button>
+              <button class="mainbtn" onclick="showForm('login')" style="cursor: pointer;">Войти</button>
+            </div>
+          
+            <div id="accountInfo" style="display: none; margin-top: 20px;">
+              <span id="userNameDisplay" style="font-weight: bold;"></span>
+              <button class="mainbtn" onclick="logout()" style="cursor: pointer;">Выйти</button>
+            </div>
+          </main>
+          
+          <script>
+            function showForm(type) {
+              document.getElementById("registerForm").style.display = type === 'register' ? 'flex' : 'none';
+              document.getElementById("loginForm").style.display = type === 'login' ? 'flex' : 'none';
+            }
+          
+            function register() {
+              const name = document.getElementById("regName").value;
+              const surname = document.getElementById("regSurname").value;
+              const email = document.getElementById("regEmail").value;
+              const password = document.getElementById("regPassword").value;
+          
+              const user = { name, surname, email, password };
+              localStorage.setItem("user", JSON.stringify(user));
+              showUser();
+            }
+          
+            function login() {
+              const email = document.getElementById("loginEmail").value;
+              const user = JSON.parse(localStorage.getItem("user"));
+          
+              if (user && user.email === email) {
+                showUser();
+              } else {
+                alert("Пользователь не найден");
+              }
+            }
+          
+            function logout() {
+              localStorage.removeItem("user");
+              document.getElementById("accountInfo").style.display = "none";
+              document.getElementById("authButtons").style.display = "block";
+            }
+          
+            function showUser() {
+              const user = JSON.parse(localStorage.getItem("user"));
+              if (user) {
+                document.getElementById("userNameDisplay").innerText = `${user.name} ${user.surname}`;
+                document.getElementById("accountInfo").style.display = "block";
+                document.getElementById("authButtons").style.display = "none";
+                document.getElementById("registerForm").style.display = "none";
+                document.getElementById("loginForm").style.display = "none";
+                document.querySelector("main h1").innerText = `Добро пожаловать, ${user.name}!`;
+              }
+            }
+          
+            window.onload = showUser;
+          </script>
+        </div>      
+</body>
+</html>

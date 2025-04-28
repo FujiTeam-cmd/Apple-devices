@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.ipad.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия iPad Air</h2>
+    <img src="../../img/ipadair.jpg" alt="Изображение iPad Air" />
+    <h3>История</h3>
+    <h1>iPad Air — История создания</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>Первый iPad Air:</strong> представлен 22 октября 2013 года</li>
+        <li><strong>Последний iPad Air (5-е поколение):</strong> представлен 8 марта 2022 года</li>
+        <li><strong>Ключевые спикеры (недавно):</strong> Тим Кук, Джон Тернус</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Обзор поколений</h2>
+      <ul>
+        <li>iPad Air (1-е поколение) — чип A7, 9.7" Retina дисплей</li>
+        <li>iPad Air 2 — чип A8X, более тонкий дизайн, Touch ID</li>
+        <li>iPad Air (3-е поколение) — экран 10.5", A12 Bionic</li>
+        <li>iPad Air (4-е поколение) — полноэкранный дизайн, USB-C, A14 Bionic</li>
+        <li>iPad Air (5-е поколение) — чип M1, поддержка 5G</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые инновации</h2>
+      <ul>
+        <li>Переход с Lightning на USB-C</li>
+        <li>Полноэкранный Liquid Retina дисплей</li>
+        <li>Поддержка Apple Pencil (2-е поколение) и Magic Keyboard</li>
+        <li>Мощные обновления чипов (от A7 до M1)</li>
+        <li>Разнообразие цветов и лёгкий алюминиевый корпус</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и особенности</h2>
+      <ul>
+        <li>До чипа M1 с 8-ядерным CPU и GPU</li>
+        <li>10.9" Liquid Retina дисплей</li>
+        <li>Технология камеры Center Stage</li>
+        <li>Touch ID встроен в верхнюю кнопку</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Отзывы и восприятие</h2>
+      <p>Серия iPad Air получила высокую оценку за баланс между мощностью и портативностью. Обозреватели отмечают высокую производительность чипа M1 в доступной и стильной форме планшета.</p>
+    </section>
+
+    <section>
+      <h2>Содержимое коробки и аксессуары</h2>
+      <ul>
+        <li>В комплекте: iPad Air, кабель USB-C, адаптер питания USB-C</li>
+        <li>Дополнительно: Apple Pencil, Magic Keyboard, Smart Folio</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — концепт, дизайн, написание, разработка, кодинг, техподдержка.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за поддержку!</h3>
+  </div>
+
+  <footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: школа-гимназия им. Ш.Муртазы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

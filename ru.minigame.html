@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    }
+    header, footer, .maindiv, .news, .why {
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        padding: 2% 5%;
+        margin-bottom: 10px;
+    }
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        background: transparent;
+    }
+    button:hover {
+        filter: brightness(200%);
+    }
+    .options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 20px;
+    }
+    .option-item {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 10px;
+        cursor: pointer;
+        flex: 1 1 200px;
+        text-align: center;
+        user-select: none;
+    }
+    .option-item.selected {
+        background-color: #d0e6ff;
+    }
+    #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<header>
+    <div class="head">
+        <button class="text-btn" data-url="ru/ru.main.html">Назад</button>
+    </div>
+    <div class="head">
+        <h2>Игра: Выбор устройства</h2>
+    </div>
+</header>
+
+<div class="maindiv">
+    <h2>Выберите предпочитаемые характеристики</h2>
+    <div class="options" id="options">
+        <div class="option-item" data-feature="battery">Батарея 5000мАч+</div>
+        <div class="option-item" data-feature="screen">Большой экран</div>
+        <div class="option-item" data-feature="weight">Лёгкий вес</div>
+        <div class="option-item" data-feature="durability">Высокая прочность</div>
+        <div class="option-item" data-feature="lifetime">Долгий срок службы</div>
+        <div class="option-item" data-feature="updates">Долгая поддержка обновлений</div>
+        <div class="option-item" data-feature="multitasking">Многозадачность</div>
+        <div class="option-item" data-feature="multifunctional">Многофункциональность</div>
+        <div class="option-item" data-feature="camera">Качественная камера</div>
+        <div class="option-item" data-feature="memory">Большой объём памяти</div>
+        <div class="option-item" data-feature="sound">Отличный звук</div>
+        <div class="option-item" data-feature="materials">Премиальные материалы</div>
+        <div class="option-item" data-feature="processor">Мощный процессор</div>
+        <div class="option-item" data-feature="performance">Высокая производительность</div>
+        <div class="option-item" data-feature="price">Доступная цена</div>
+        <div class="option-item" data-feature="rating">Высокие оценки</div>
+        <div class="option-item" data-feature="ram">Большой объём ОЗУ</div>
+    </div>
+    <button onclick="suggestDevice()" style="margin-top: 20px; padding: 10px; background-color: #ccc; border-radius: 10px;">Найти устройства</button>
+    <div id="result"></div>
+</div>
+
+<footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: школа-гимназия имени Ш. Муртаза</p>
+</footer>
+
+<script>
+
+const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+
+const options = document.querySelectorAll('.option-item');
+options.forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.toggle('selected');
+    });
+});
+
+function suggestDevice() {
+    const selected = document.querySelectorAll('.option-item.selected');
+    const features = Array.from(selected).map(opt => opt.dataset.feature);
+
+    let database = [
+        { name: "iPhone 16 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 16 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 16 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 16", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 15 Pro Max", features: ["camera", "performance", "processor", "materials", "updates", "rating", "multitasking"] },
+        { name: "iPhone 15 Pro", features: ["camera", "performance", "processor", "materials", "updates", "rating"] },
+        { name: "iPhone 15 Plus", features: ["battery", "screen", "updates", "durability"] },
+        { name: "iPhone 15", features: ["battery", "screen", "updates"] },
+        { name: "iPhone 14", features: ["price", "updates"] },
+        { name: "iPhone SE 3-го поколения", features: ["price", "performance", "updates"] },
+        { name: "iPad Pro M2", features: ["performance", "multitasking", "screen", "ram"] },
+        { name: "iPad Air M2", features: ["lightweight", "screen", "updates"] },
+        { name: "iPad 10-го поколения", features: ["price", "screen"] },
+        { name: "MacBook Pro 14 M3", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Pro 16 M3 Max", features: ["performance", "processor", "multitasking", "ram", "memory"] },
+        { name: "MacBook Air M2", features: ["lightweight", "performance", "battery"] },
+        { name: "Mac Studio M2 Ultra", features: ["performance", "processor", "ram", "memory", "multifunctional"] },
+        { name: "Mac Mini M2", features: ["price", "performance"] },
+        { name: "Apple Watch Ultra 2", features: ["durability", "lifetime", "battery", "materials"] },
+        { name: "Apple Watch Series 9", features: ["updates", "durability"] },
+        { name: "AirPods Pro 2", features: ["sound", "durability"] },
+        { name: "AirPods Max", features: ["sound", "materials"] }
+    ];
+
+    let suggestions = database.filter(device =>
+        features.every(feature => device.features.includes(feature))
+    );
+
+    if (suggestions.length === 0) {
+        suggestions = database.filter(device =>
+            features.some(feature => device.features.includes(feature))
+        );
+    }
+
+    if (suggestions.length === 0) {
+        document.getElementById('result').innerText = "Идеальных совпадений не найдено. Попробуйте выбрать меньше характеристик.";
+    } else {
+        document.getElementById('result').innerText = "Предлагаемые устройства: " + suggestions.map(d => d.name).join(", ");
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.mac.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия MacBook</h2>
+    <img src="../../img/macbook19.jpg" alt="Изображение MacBook" />
+    <h3>История</h3>
+    <h1>MacBook — мощный ноутбук на каждый день</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>MacBook (1-е поколение):</strong> 16 мая 2006</li>
+        <li><strong>MacBook (12-дюймовый, 1-е поколение):</strong> 9 марта 2015</li>
+        <li><strong>MacBook (M1, 2020):</strong> 10 ноября 2020</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Процессоры Apple M1 или Intel Core (в зависимости от модели)</li>
+        <li>Retina дисплей (в 12-дюймовой версии)</li>
+        <li>Клавиатура Magic Keyboard</li>
+        <li>Порты USB-C / Thunderbolt</li>
+        <li>Длительное время автономной работы</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и универсальность</h2>
+      <p>MacBook предлагает тонкий дизайн и портативность, а также отличную производительность благодаря чипу M1. Идеален для повседневных задач, работы и развлечений.</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и популярность</h2>
+      <p>Пользователи хвалят MacBook за стильный дизайн, скорость и автономность. Он остаётся популярным выбором для студентов, профессионалов и креативщиков.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: MacBook, кабель USB-C / Lightning, адаптер питания</li>
+        <li>Дополнительно: Magic Mouse, Magic Trackpad, внешний монитор, чехлы</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, дизайн, разработка, текст.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за интерес!</h3>
+  </div>
+
+  <footer>
+    <p>Контакты: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: школа-гимназия им. Ш.Муртазы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

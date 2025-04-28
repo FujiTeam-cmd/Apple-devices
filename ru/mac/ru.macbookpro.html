@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.mac.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия MacBook Pro</h2>
+    <img src="../../img/macbookpro.jpg" alt="Изображение MacBook Pro" />
+    <h3>История</h3>
+    <h1>MacBook Pro — Мощность для профессионалов</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>Первый MacBook Pro:</strong> 10 января 2006</li>
+        <li><strong>MacBook Pro (M1):</strong> 10 ноября 2020</li>
+        <li><strong>MacBook Pro (14/16 дюймов, M1 Pro/Max):</strong> 18 октября 2021</li>
+        <li><strong>MacBook Pro (серия M3):</strong> 30 октября 2023</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Чипы Apple M1, M2 и M3</li>
+        <li>Дисплеи Liquid Retina XDR 14 и 16 дюймов</li>
+        <li>ProMotion (частота обновления 120 Гц)</li>
+        <li>Порты Thunderbolt 4, HDMI, слот для SD-карт</li>
+        <li>До 22 часов работы от батареи</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и применение</h2>
+      <p>Создан для профессионалов: дизайнеров, разработчиков, видеомонтажёров. Обеспечивает мощность настольного ПК в портативном формате.</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и популярность</h2>
+      <p>Высоко оценивается за производительность, качество экрана и разнообразие портов. Популярен среди творческих специалистов и технарей.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: MacBook Pro, кабель MagSafe, адаптер питания (67–140 Вт)</li>
+        <li>Дополнительно: Magic Mouse, Magic Keyboard, внешние дисплеи</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, контент, код, визуальный дизайн.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за внимание!</h3>
+  </div>
+
+  <footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: Гимназия им. Ш. Муртазы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

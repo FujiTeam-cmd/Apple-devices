@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.mac.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия Mac Studio</h2>
+    <img src="../../img/macstudio.png" alt="Изображение Mac Studio" />
+    <h3>История</h3>
+    <h1>Mac Studio — Мощь в компактном дизайне</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>Первый Mac Studio:</strong> 8 марта 2022 года</li>
+        <li><strong>Mac Studio с M1 Ultra:</strong> 8 марта 2022 года</li>
+        <li><strong>Mac Studio с M2 Ultra:</strong> 5 июня 2023 года</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Чипы Apple M1 и M2 Ultra</li>
+        <li>Поддержка до 128 ГБ унифицированной памяти</li>
+        <li>Поддержка дисплеев до 4K, 5K и 6K</li>
+        <li>Компактный и бесшумный дизайн</li>
+        <li>Множество портов Thunderbolt 4 и USB-C</li>
+        <li>До 8 ТБ памяти</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и области применения</h2>
+      <p>Mac Studio предназначен для профессионалов в таких областях, как видеомонтаж, 3D-рендеринг, музыкальное производство и разработка ПО. Он предлагает невероятную производительность в компактном корпусе, обеспечивая рабочую станцию для самых требовательных задач.</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и популярность</h2>
+      <p>Mac Studio получил признание за свою исключительную мощность и производительность, особенно учитывая его размер. Он считается отличным выбором для создателей контента, дизайнеров и профессионалов, которым нужна мощная вычислительная сила без громоздкости традиционных настольных ПК.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: Mac Studio, кабель питания</li>
+        <li>Дополнительно: Apple Display, Magic Mouse, Magic Keyboard</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, контент, код, визуальный дизайн.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за внимание!</h3>
+  </div>
+
+  <footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: Ш.Муртаза Гимназия</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

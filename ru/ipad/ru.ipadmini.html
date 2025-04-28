@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.ipad.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия iPad mini</h2>
+    <img src="../../img/iPad_mini.jpg" alt="Изображение iPad mini" />
+    <h3>История</h3>
+    <h1>iPad mini — Компактность и мощь</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>iPad mini (1-е поколение):</strong> 23 октября 2012</li>
+        <li><strong>iPad mini 2:</strong> 22 октября 2013</li>
+        <li><strong>iPad mini 3:</strong> 16 октября 2014</li>
+        <li><strong>iPad mini 4:</strong> 9 сентября 2015</li>
+        <li><strong>iPad mini (5-е поколение):</strong> 18 марта 2019</li>
+        <li><strong>iPad mini (6-е поколение):</strong> 14 сентября 2021</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Чип A15 Bionic (6-е поколение)</li>
+        <li>8.3-дюймовый Liquid Retina дисплей</li>
+        <li>Touch ID в кнопке питания</li>
+        <li>Поддержка Apple Pencil (2-е поколение)</li>
+        <li>USB-C порт</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Форм-фактор и удобство</h2>
+      <p>iPad mini ценится за портативность, лёгкий вес и мощную производительность в маленьком корпусе. Он идеален для чтения, заметок и путешествий.</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и использование</h2>
+      <p>Пользователи и критики отмечают, что iPad mini сочетает в себе производительность больших моделей и удобство смартфона. Это универсальный инструмент для студентов, врачей и путешественников.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: iPad mini, кабель USB-C, адаптер</li>
+        <li>Дополнительно: Apple Pencil (2-го поколения), чехлы</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, текст, верстка, код, визуализация.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Благодарим за внимание!</h3>
+  </div>
+
+  <footer>
+    <p>Контакты: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: школа-гимназия им. Ш.Муртазы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

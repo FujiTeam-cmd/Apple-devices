@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+        width: 25%;
+        height: auto;
+    }
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="ru.iphone.html">Назад</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>Серия iPhone 3GS</h2>
+        <img src="../../img/iphone_3gs.jpg.webp" />
+        <h4 align="right"></h4>
+        <h3>История</h3>
+        <h1>История создания iPhone 3GS</h1>
+    
+        <section>
+            <h2>Анонс и дата выхода</h2>
+            <ul>
+                <li><strong>Анонс:</strong> 8 июня 2009 года, WWDC 2009, Сан-Франциско</li>
+                <li><strong>Дата выхода:</strong> 19 июня 2009 года</li>
+                <li><strong>Основные спикеры:</strong> Стив Джобс</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Описание модели</h2>
+            <ul>
+                <li>3.5" экран с разрешением 320x480 пикселей</li>
+                <li>Чип ARM Cortex-A8</li>
+                <li>3MP камера с автофокусом</li>
+                <li>Поддержка видео записи</li>
+                <li>Увеличенная производительность по сравнению с iPhone 3G</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Ключевые особенности</h2>
+            <ul>
+                <li>Улучшенная камера с автофокусом и видеозаписью</li>
+                <li>Ускоренная производительность благодаря чипу ARM Cortex-A8</li>
+                <li>Поддержка голосовых команд (Voice Control)</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Отзывы и оценки</h2>
+            <p>iPhone 3GS был принят положительно благодаря улучшенной производительности и возможностям камеры. Камера с автофокусом и возможность записи видео были высоко оценены пользователями, а также улучшенная скорость работы.</p>
+        </section>
+    
+        <section>
+            <h2>Комплектация</h2>
+            <ul>
+                <li>iPhone 3GS, кабель USB, адаптер питания, наушники</li>
+                <li>Дополнительно: чехлы, зарядные устройства</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредиты</h2><h3>FujiTeam — концепция, дизайн, написание, разработка, кодирование, техническая поддержка.</h3><h3>Источник-Apple Corporation</h3><h3>Спасибо за поддержку!</h3></div><!-- AUTHORS -->
+    <footer><p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Номер телефона: +8 776 848 2309</p>
+        <p>Адрес: Школа-гимназия имени Шерхана Муртазы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

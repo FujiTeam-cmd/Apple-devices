@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+        width: 200px;
+    }
+
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="ru.mac.html">Назад</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Серия iMac</h2>
+    <img src="../../img/imac.avif" alt="Изображение iMac" />
+    <h3>История</h3>
+    <h1>iMac — Мощность в элегантном формате</h1>
+
+    <section>
+      <h2>Анонсы и даты выхода</h2>
+      <ul>
+        <li><strong>Первый iMac:</strong> 15 августа 1998 года</li>
+        <li><strong>iMac (Intel):</strong> 7 января 2009 года</li>
+        <li><strong>iMac (Retina 4K и 5K):</strong> 13 октября 2015 года</li>
+        <li><strong>iMac (M1):</strong> 20 апреля 2021 года</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Ключевые особенности</h2>
+      <ul>
+        <li>Чип Apple M1 (для модели 2021 года)</li>
+        <li>24 и 27 дюймов Retina 4K/5K дисплеи</li>
+        <li>До 16 ГБ ОЗУ, 1 ТБ SSD памяти</li>
+        <li>Тонкий и элегантный дизайн с разнообразием цветовых вариантов</li>
+        <li>До 10 ядер CPU и 8 ядер GPU</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Производительность и применение</h2>
+      <p>iMac идеально подходит для креативных специалистов, профессионалов и домашних пользователей, которым нужно мощное решение в формате "все в одном".</p>
+    </section>
+
+    <section>
+      <h2>Отзывы и популярность</h2>
+      <p>Высоко оценивается за потрясающий дисплей, элегантный дизайн и мощную производительность. iMac остается одним из лучших выборов для пользователей, которым нужен надежный и стильный настольный компьютер.</p>
+    </section>
+
+    <section>
+      <h2>Комплектация и аксессуары</h2>
+      <ul>
+        <li>В комплекте: iMac, Magic Keyboard, Magic Mouse, силовой кабель</li>
+        <li>Дополнительно: Magic Trackpad, внешние устройства хранения данных</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, контент, код, визуальный дизайн.</h3>
+    <h3>Источник — Apple Inc.</h3>
+    <h3>Спасибо за внимание!</h3>
+  </div>
+
+  <footer>
+    <p>Связаться с нами: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Адрес: Ш.Муртаза Гимназия</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>
