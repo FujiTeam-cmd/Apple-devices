@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="kk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #f3f3f3;
+            color: #222;
+            font-size: 16px;
+        } 
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 5%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            margin-bottom: 3px;
+        }
+    
+        button {
+            all: unset;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+    
+        button:hover {
+            filter: brightness(200%);
+        }
+    
+        .head {
+            display: flex;
+            justify-content: left;
+            gap: 10%;
+            padding: 0.5%;
+        }
+    
+        ul {
+            align-items: center;
+            margin-left: 2.5%;
+        }
+    
+        .maindiv {
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 5%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+        }
+    
+        .ip16 {
+            border-radius: 15px;
+            height: auto;
+            width: 100%;
+        }
+    
+        #menu {
+            background-color: #f0f0f0;
+            padding: 2%;
+            border: 1px solid #ccc;
+            width: 10%;
+            position: absolute;
+            margin-top: 5px;
+            border-radius: 15px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            left: 43%;
+        }
+    
+        .hidden {
+            display: none;
+            left: 50%;
+        }
+    
+        .news {
+            justify-content: space-between;
+            align-items: center;
+            padding: 2% 5%;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            width:225px;
+            height:350px;
+        }
+    
+        .why {
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            width: 205px;
+            height:350px;
+        }
+    
+        img {
+            border-radius: 15px;
+        }
+    
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="errbtn" onclick="toggleMenu()">Басты бет</button>
+                    <div align="center" id="menu" class="hidden">Сіз батты беттесіз</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="iphone/kz.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="ipad/kz.ipad.html">iPad</button>
+                <button class="text-btn" data-url="mac/kz.mac.html">Mac</button>
+                <button class="text-btn" data-url="watch/kz.watch.html">Watch</button>
+                <button class="text-btn" data-url="airpods/kz.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="kz.profile.html">Профиль</button>
+                <button class="text-btn" data-url="../kz.minigame.html">Мини ойын</button>
+            </div>
+            <div class="head">
+                <button class="text-btn" data-url="../ru/ru.main.html">Ru</button>
+                <button class="text-btn" data-url="../en/en.main.html">En</button>
+              </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>Apple - инновация қарапайымдылыққа сәйкес келетін жер</h2>
+        <video class="ip16" src="../img/iphone16.mp4" loop autoplay muted></video>
+        <h2>Apple туралы</h2>
+        <p>Apple - iPhone, Mac және Apple Watch сияқты инновациялық өнімдерімен танымал жетекші технологиялық компания. 1976 жылы негізі қаланған Apple компаниясы дизайнға, өнімділікке және пайдаланушы тәжірибесіне назар аударады. Оның құрылғылары мен қызметтерінің экожүйесін бүкіл әлем бойынша миллиондаған адамдар пайдаланады.</p>
+    </div><!-- BRAND INFO -->
+    <div><h2 style="margin-left: 10px;">Жаңалықтар</h2>
+        <ul style="list-style-type: none; display: flex; margin: 10; padding-left: 0; ">    
+            <li style="margin-right: 10px;">
+                <div class="news" style="padding:10px;"><img src="../img/airpodsmax.png" width="100%" height="auto"/><h4 fontcolor="gray">Жаңа</h4><h3>AirPods Max құрылғысында жоғалмайтын дыбыс және өте төмен кідіріс аудиосы </h3><h4 fontcolor="gray">Наурыз 24, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">
+                <div class="news" style="padding:10px;"><img src="../img/m3.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Жаңа</h4><h3>Apple M3 Ultra-ны көрсетті, бұл Apple кремнийін жаңа экстремалды деңгейге шығарады</h3><h4 fontcolor="gray">Наурыз 24, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><center><img src="../img/macstudio.png" width="70%" height="auto"/></center><h4 fontcolor="gray">Жаңа</h4><h3>Apple жаңа Mac Studio-ны таныстырады, ең қуатты Mac</h3><h4 fontcolor="gray">Наурыз 5, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><img src="../img/ipadair.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Жаңа</h4><h3>Apple қуатты M3 чипі және жаңа Magic пернетақтасы бар iPad Air ұсынады</h3><h4 fontcolor="gray">Наурыз 4, 2025</h4></div>
+            </li>
+            <li style="margin-right: 10px;">    
+                <div class="news" style="padding:10px;"><img src="../img/macbook.jpg" width="100%" height="auto"/><h4 fontcolor="gray">Жаңа</h4><h3>Apple M4 чипі және көк көк түсті жаңа MacBook Air ұсынады</h3><h4 fontcolor="gray">Наурыз 5, 2025</h4></div>
+            </li>
+        </ul>
+    </div><!-- NEWS -->
+
+        <h2>Неліктен Apple?</h2>
+        <ul style="list-style-type: none; display: flex; margin: 10; padding-left: 0;">
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/ios.jpg" width="100%" height="auto"/><h3>Қолдану жеңілдігі</h3><h4>Интуитивті интерфейс және үздіксіз экожүйе</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/251.png" width="100%" height="auto"/><h3>Жоғары құрылыс сапасы</h3><h4>Төзімді, жоғары сапалы материалдар және стильді дизайн</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/sync.jpg" width="100%" height="auto"/><h3>Құрылғы синхроны</h3><h4>Apple өнімдері арасындағы оңай әрекеттесу</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/sec2.png" width="100%" height="auto"/><h3>Қауіпсіздік және құпиялылық</h3><h4>Күшті деректерді қорғау механизмдері және қауіпсіздік жаңартулары</h4></div></li>
+            <li style="margin-right: 10px;"><div class="why"><img src="../img/inno.png" width="100%" height="auto"/><h3>Инновациялық технологиялар</h3><h4>Face ID, m3, m4 чиптері және жетілдірілген камералар сияқты жаңа мүмкіндіктер</h4></div></li>
+        </ul>
+    <!-- WHY APPLE? -->
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредит</h2><h3>FujiTeam-FujiTeam-концепт, дизайн, жазу, әзірлеу, кодтау, техникалық қолдау.</h3><h3>Дереккөз-Apple Corporation</h3><h3>Қолдауыңызға рахмет!</h3></div><!-- AUTHORS -->
+    <footer><p>Бізбен хабарласыңыз: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Телефон нөмірі: +8 776 848 2309</p>
+        <p>Мекенжай:Шерхан Мұртаза атындағы мектеп-гимназиясы</p>
+        <button class="text-btn" data-url="../kz.interview.html">Сұхбат</button>
+    </footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+</body>
+</html>

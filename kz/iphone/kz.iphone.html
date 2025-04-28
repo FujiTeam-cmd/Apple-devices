@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="kk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+        width: 200px;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+
+    img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    .highlight {
+    background-color: rgba(9, 255, 0, 0.548);
+    font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../kz.main.html">Басты бет</button>
+                <button class="errbtn" onclick="toggleMenu()">iPhone</button>
+                <div align="center" id="menu" class="hidden">Сіз iPhone бетіндесіз</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../ipad/kz.ipad.html">iPad</button>
+                <button class="text-btn" data-url="../mac/kz.mac.html">Mac</button>
+                <button class="text-btn" data-url="../wacth/kz.watch.html">Watch</button>
+                <button class="text-btn" data-url="../airpods/kz.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="../kz.profile.html">Профиль</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Apple құрылғыларын іздеу" style="font-family: monospace;">
+                <button onclick="searchName()">Іздеу</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="kz.iphone16s.html"><img src="../../img/iphone_16.jpg" align="left"/><h2>iPhone 16 Series</h2><h4>Дисплей: 6.1" (16) – 6.7" (16 Plus, 16 Pro Max), OLED<br>Процессор: A18 Bionic (барлық модельдер), A18 Pro (Pro және Pro Max үшін)<br>Ерекшеліктері: Wi-Fi 7, Action + Камера батырмасы, iOS 18, Apple Intelligence (iOS 19-пен)</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone15s.html"><img src="../../img/iphone_15.jpg" align="left"/><h2>iPhone 15 Series</h2><h4>Дисплей: 6.1" (15, 15 Pro) – 6.7" (15 Plus, 15 Pro Max), OLED<br>Процессор: A16 Bionic (15/15 Plus), A17 Pro (Pro/Pro Max)<br>Ерекшеліктері: USB-C, титан корпусы (Pro), 5 есе зум (Pro Max)</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone14s.html"><img src="../../img/iphone_14.jpg" align="left"/><h2>iPhone 14 Series</h2><h4>Дисплей: 6.1" (14, 14 Pro) – 6.7" (14 Plus, 14 Pro Max), OLED<br>Процессор: A15 Bionic (14/14 Plus), A16 Bionic (Pro/Pro Max)<br>Ерекшеліктері: Always-On дисплей, Dynamic Island (Pro), спутниктік байланыс</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone13s.html"><img src="../../img/iphone_13.jpg" align="left"/><h2>iPhone 13 Series</h2><h4>Дисплей: 5.4" (Mini) – 6.7" (Pro Max), OLED<br>Процессор: A15 Bionic<br>Ерекшеліктері: ProMotion 120 Гц (Pro), Кинорежим (Cinematic Mode)</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone12s.html"><img src="../../img/iphone_12.jpg" align="left"/><h2>iPhone 12 Series</h2><h4>Дисплей: 5.4" (Mini) – 6.7" (Pro Max), OLED<br>Процессор: A14 Bionic<br>Ерекшеліктері: 5G, MagSafe, жалпақ дизайн</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphonese2.html"><img src="../../img/iphone_se2.jpg" align="left"/><h2>iPhone SE (2-ші буын)</h2><h4>Дисплей: 4.7" Retina HD<br>Процессор: A13 Bionic<br>Ерекшеліктері: Touch ID, ықшам дизайн, сымсыз зарядтау қолдауы</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone11s.html"><img src="../../img/iphone_11.jpg" align="left"/><h2>iPhone 11 Series</h2><h4>Дисплей: 6.1" LCD (11), 5.8" / 6.5" OLED (Pro/Pro Max)<br>Процессор: A13 Bionic<br>Ерекшеліктері: түнгі режим, үш камера (Pro)</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphonexr.html"><img src="../../img/iphone_xr.jpg" align="left"/><h2>iPhone XR</h2><h4>Дисплей: 6.1" LCD<br>Процессор: A12 Bionic<br>Ерекшеліктері: Face ID, түрлі ашық түстер</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphonexs.html"><img src="../../img/iphone_xs.jpg" align="left"/><h2>iPhone XS Series</h2><h4>Дисплей: 5.8" - 6.5" (Max) OLED<br>Процессор: A12 Bionic<br>Ерекшеліктері: Dual SIM қолдауы, жақсартылған камера</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphonex.html"><img src="../../img/iphone_X.jpg" align="left"/><h2>iPhone X</h2><h4>Дисплей: 5.8" OLED<br>Процессор: A11 Bionic<br>Ерекшеліктері: Face ID, шетінен шетіне дейін экран, Home батырмасының болмауы</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone8s.html"><img src="../../img/iphone_8.jpg" align="left"/><h2>iPhone 8 Series</h2><h4>Дисплей: 4.7" - 5.5" Retina HD<br>Процессор: A11 Bionic<br>Ерекшеліктері: Touch ID, сымсыз зарядтау, шыны артқы панель</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphonese1.html"><img src="../../img/iphone_se.jpg" align="left"/><h2>iPhone SE (1-ші буын)</h2><h4>Дисплей: 4" Retina<br>Процессор: A9<br>Ерекшеліктері: Touch ID, ықшам корпус, iOS 9 жүйесімен алғашқы модель</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone7s.html"><img src="../../img/iphone_7.jpg" align="left"/><h2>iPhone 7 Series</h2><h4>Дисплей: 4.7" - 5.5" Retina HD<br>Процессор: A10 Fusion<br>Ерекшеліктері: суға төзімділік, 3.5 мм құлаққап ұясының болмауы, қос камера (Plus)</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone6s.html"><img src="../../img/iphone_6.jpg" align="left"/><h2>iPhone 6 Series</h2><h4>Дисплей: 4.7" - 5.5" Retina HD<br>Процессор: A8<br>Ерекшеліктері: жақсартылған камера, Apple Pay қолдауы</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone5s.html"><img src="../../img/iphone_5.jpg" align="left"/><h2>iPhone 5 Series</h2><h4>Дисплей: 4" Retina<br>Процессор: A6 - A7<br>Ерекшеліктері: 5s: Touch ID, алғашқы 64-биттік процессор; 5c: пластик корпус, ашық түстер; 5: жіңішке дизайн, жақсырақ камера</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone4s.html"><img src="../../img/iphone_4.jpg" align="left"/><h2>iPhone 4 Series</h2><h4>Дисплей: 3.5" Retina<br>Процессор: A4 - A5<br>Ерекшеліктері: 4s: Siri, жақсартылған камера; 4: жаңа дизайн, алғашқы Retina дисплей</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone3gs.html"><img src="../../img/iphone_3gs.jpg.webp" align="left"/><h2>iPhone 3GS</h2><h4>Дисплей: 3.5" LCD<br>Процессор: ARM Cortex-A8<br>Ерекшеліктері: жақсартылған камера, бейне жазу</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone3g.html"><img src="../../img/iphone_3g.jpg" align="left"/><h2>iPhone 3G</h2><h4>Дисплей: 3.5" LCD<br>Процессор: ARM 11<br>Ерекшеліктері: 3G қолдауы, App Store</h4></button></li>
+            <li><button class="maindiv1" data-url="kz.iphone1.html"><img src="../../img/iphone_1st.jpg" align="left"/><h2>iPhone (1-ші буын)</h2><h4>Дисплей: 3.5" LCD<br>Процессор: ARM 11<br>Ерекшеліктері: алғашқы iPhone, тек 2G желісі</h4></button></li>
+        </ul>
+        </ul>
+    </div>
+    
+    <script>
+        const button = 
+        document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+    <script>
+    const buttons = 
+        document.querySelectorAll('.maindiv1').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function searchName() {
+                    const query = document.getElementById("searchInput").value.trim();
+                    if (!query) return;
+                
+                    const regex = new RegExp(`(${query})`, "gi");
+                    const items = document.querySelectorAll("#nameList li");
+                    let firstMatch = null;
+                
+                    items.forEach(item => {
+                      removeHighlights(item);
+                      const matched = highlightMatches(item, regex);
+                      if (matched && !firstMatch) {
+                        firstMatch = item;
+                      }
+                    });
+                
+                    if (firstMatch) {
+                      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                  }
+                
+                  function removeHighlights(element) {
+                    const spans = element.querySelectorAll("span.highlight");
+                    spans.forEach(span => {
+                      span.replaceWith(span.textContent);
+                    });
+                  }
+                
+                  function highlightMatches(node, regex) {
+                    let found = false;
+                
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const match = node.textContent.match(regex);
+                      if (match) {
+                        const span = document.createElement("span");
+                        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+                        node.replaceWith(...span.childNodes);
+                        found = true;
+                      }
+                    }
+                    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+                      node.childNodes.forEach(child => {
+                        if (highlightMatches(child, regex)) {
+                          found = true;
+                        }
+                      });
+                    }
+                
+                    return found;
+                  }
+    </script>
+</body>
+</html>

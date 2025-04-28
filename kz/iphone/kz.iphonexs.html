@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="kz.iphone.html">Артқа</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>iPhone XS сериясы</h2>
+        <img src="../../img/iphone_xs.jpg" />
+        <h4 align="right"></h4>
+        <h3>Тарихы</h3>
+        <h1>iPhone XS сериясының жасалу тарихы</h1>
+    
+        <section>
+            <h2>Жариялануы және шығу күні</h2>
+            <ul>
+                <li><strong>Жариялау:</strong> 2018 жылғы 12 қыркүйек, Steve Jobs Theater</li>
+                <li><strong>Шығу күні:</strong> 2018 жылғы 21 қыркүйек</li>
+                <li><strong>Басты баяндамашылар:</strong> Тим Кук, Фил Шиллер</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Модельдер қатары</h2>
+            <ul>
+                <li>iPhone XS — 5.8", OLED дисплей</li>
+                <li>iPhone XS Max — 6.5", сол кездегі ең үлкен экран</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Негізгі жаңалықтар</h2>
+            <ul>
+                <li>A12 Bionic чипі</li>
+                <li>Smart HDR технологиясымен жақсартылған қос камера</li>
+                <li>Қос SIM (nano + eSIM) қолдауы</li>
+                <li>Су мен шаңға қарсы қорғаныс (IP68)</li>
+                <li>Жаңа алтын түс</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Пікірлер мен бағалар</h2>
+            <p>XS сериясы өнімділігі мен камера мүмкіндіктері үшін жоғары баға алды. XS Max үлкен экранды ұнататындар үшін ерекше болды.</p>
+        </section>
+    
+        <section>
+            <h2>Қорап және аксессуарлар</h2>
+            <ul>
+                <li>Ішінде: iPhone, қуаттағыш, Lightning кабелі, EarPods құлаққаптары</li>
+                <li>Қосымша: қаптар, сымсыз қуаттағыштар</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредит</h2><h3>FujiTeam-FujiTeam-концепт, дизайн, жазу, әзірлеу, кодтау, техникалық қолдау.</h3><h3>Дереккөз-Apple Corporation</h3><h3>Қолдауыңызға рахмет!</h3></div><!-- AUTHORS -->
+    <footer><p>Бізбен хабарласыңыз: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Телефон нөмірі: +8 776 848 2309</p>
+        <p>Мекенжай:Шерхан Мұртаза атындағы мектеп-гимназиясы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

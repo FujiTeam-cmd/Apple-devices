@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="kz.iphone.html">Артқа</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>iPhone 12 сериясы</h2>
+        <img src="../../img/iphone_12.jpg" />
+        <h4 align="right"></h4>
+        <h3>Тарихы</h3>
+        <h1>iPhone 12 сериясының жасалу тарихы</h1>
+    
+        <section>
+            <h2>Жариялануы және шығу күні</h2>
+            <ul>
+                <li><strong>Жариялау:</strong> 2020 жылғы 13 қазан (онлайн)</li>
+                <li><strong>Шығу күні:</strong> 2020 жылғы 23 қазан (12 және 12 Pro), 13 қараша (mini және Pro Max)</li>
+                <li><strong>Басты баяндамашылар:</strong> Тим Кук, Грег Джосвиак</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Модельдер қатары</h2>
+            <ul>
+                <li>iPhone 12 mini — 5.4", шағын үлгі</li>
+                <li>iPhone 12 — 6.1", стандартты</li>
+                <li>iPhone 12 Pro — 6.1", премиум</li>
+                <li>iPhone 12 Pro Max — 6.7", флагман</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Негізгі жаңалықтар</h2>
+            <ul>
+                <li>5G қолдауы</li>
+                <li>Жаңа жазық қырлы дизайн</li>
+                <li>A14 Bionic процессоры</li>
+                <li>Ceramic Shield — берік әйнек</li>
+                <li>MagSafe аксессуарлары</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Пікірлер мен бағалар</h2>
+            <p>iPhone 12 5G, өнімділік және дизайны үшін жоғары бағаланды. iPhone 12 mini — шағын смартфондарды ұнататындар арасында танымал болды.</p>
+        </section>
+    
+        <section>
+            <h2>Қорап және аксессуарлар</h2>
+            <ul>
+                <li>Ішінде: iPhone 12, Lightning–USB-C кабелі, құжаттар</li>
+                <li>Қосымша: MagSafe қаптар, зарядтағыштар және аксессуарлар</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредит</h2><h3>FujiTeam-FujiTeam-концепт, дизайн, жазу, әзірлеу, кодтау, техникалық қолдау.</h3><h3>Дереккөз-Apple Corporation</h3><h3>Қолдауыңызға рахмет!</h3></div><!-- AUTHORS -->
+    <footer><p>Бізбен хабарласыңыз: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Телефон нөмірі: +8 776 848 2309</p>
+        <p>Мекенжай:Шерхан Мұртаза атындағы мектеп-гимназиясы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

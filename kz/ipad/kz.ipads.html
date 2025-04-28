@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="kz.ipad.html">Артқа</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iPad сериясы (Қарапайым)</h2>
+    <img src="../../img/ipad11.jpg" alt="Қарапайым iPad суреті" />
+    <h3>Тарихы</h3>
+    <h1>iPad — Классикалық планшет Apple</h1>
+
+    <section>
+      <h2>Анонстар мен шығу күндері</h2>
+      <ul>
+        <li><strong>iPad (1-ші буын):</strong> 27 қаңтар 2010</li>
+        <li><strong>iPad (5-ші буын):</strong> 21 наурыз 2017</li>
+        <li><strong>iPad (6-шы буын):</strong> 27 наурыз 2018</li>
+        <li><strong>iPad (7-ші буын):</strong> 10 қыркүйек 2019</li>
+        <li><strong>iPad (8-ші буын):</strong> 15 қыркүйек 2020</li>
+        <li><strong>iPad (9-шы буын):</strong> 14 қыркүйек 2021</li>
+        <li><strong>iPad (10-шы буын):</strong> 18 қазан 2022</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Негізгі ерекшеліктер</h2>
+      <ul>
+        <li>Чип A13 немесе A14 Bionic (буынға байланысты)</li>
+        <li>10.2 немесе 10.9 дюймдік Retina дисплей</li>
+        <li>Touch ID</li>
+        <li>Apple Pencil (1-ші буын) қолдауы</li>
+        <li>USB-C (10-шы буыннан бастап)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Қолжетімділік және әмбебаптық</h2>
+      <p>iPad — бұл ең қолжетімді Apple планшеті, білім беру, күнделікті қолдану, жұмыс және ойын-сауық үшін өте қолайлы. Оның қарапайымдылығы оны жаңадан бастаушылар үшін өте ыңғайлы етеді.</p>
+    </section>
+
+    <section>
+      <h2>Пікірлер мен танымалдылық</h2>
+      <p>Классикалық iPad өзінің бағасы, сенімділігі және таныс интерфейсі арқасында ең танымал таңдау болып табылады. Оны мектептер, отбасылар мен жеке пайдаланушылар ұсынып келеді.</p>
+    </section>
+
+    <section>
+      <h2>Жабдықтау және аксессуарлар</h2>
+      <ul>
+        <li>Жабдықта: iPad, USB-C / Lightning кабелі, адаптер</li>
+        <li>Қосымша: Apple Pencil, Smart Keyboard пернетақталары</li>
+      </ul>
+    </section>
+  </div>
+
+    <div class="maindiv" style="height: 200px;">
+        <h2>Авторлар</h2>
+        <h3>FujiTeam — мәтін, құрылым, код, визуализация.</h3>
+        <h3>Дереккөз — Apple Inc.</h3>
+        <h3>Қызығушылық танытқаныңыз үшін рақмет!</h3
+    </div>
+
+    <footer>
+      <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+      <p>Телефон: +8 776 848 2309</p>
+      <p>Мекенжай: Ш.Муртаза атындағы мектеп-гимназия</p>
+    </footer>
+  
+    <script>
+      document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+          const url = button.dataset.url;
+          window.location.href = url;
+        });
+      });
+    </script>
+  </body>
+  </html>
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html><html lang="kk">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .maindiv1 {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        width: 95%;
+        margin-bottom: 10px;
+    }
+
+    .search {
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 5px;
+        background: #f0f0f0;
+        width: 200px;
+    }
+
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    .hidden {
+        display: none;
+        left: 50%;
+    }
+       
+     img {
+        height: 200px;
+        width:auto;
+        border-radius: 15px;
+        margin-right: 10px;
+    }
+
+    li {
+        width: 102%;
+    }
+    .highlight {
+    background-color: rgba(9, 255, 0, 0.548);
+    font-weight: bold;
+  }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="../kz.main.html">Басты бет</button>
+                <button class="text-btn" data-url="../iphone/kz.iphone.html">iPhone</button>
+                <button class="text-btn" data-url="../ipad/kz.ipad.html">iPad</button>
+                <button class="text-btn" data-url="../mac/kz.mac.html">Mac</button>
+                <button class="errbtn" onclick="toggleMenu()">Watch</button>
+                <div align="center" id="menu" class="hidden">Сіз Watch бетіндесіз</div>
+                    <script>
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.toggle("hidden")
+                        }
+
+                        function toggleMenu() {
+                            const menu = 
+                        document.getElementById("menu");
+                            menu.classList.remove("hidden");
+                            setTimeout(() => {
+                                menu.classList.add("hidden");
+                            }, 3000);
+                        }
+                    </script>
+                <button class="text-btn" data-url="../airpods/kz.airpods.html">AirPods</button>
+                <button class="text-btn" data-url="../kz.profile.html">Профиль</button>
+            </div>
+            <div class="search-section">
+                <input type="text" id="searchInput" class="search" placeholder="Apple құрылғыларын іздеу" style="font-family: monospace;">
+                <button onclick="searchName()">Іздеу</button>
+            </div>
+        </header>
+    </div>
+    <div>
+        <ul id="nameList" style="list-style-type: none; margin: 10; padding-left: 0;">
+            <li><button class="maindiv1" data-url="apple_watch_1st.html"><img src="../../img/applew1st.jpg" align="left"/><h2>Apple Watch (1-буын)</h2><h4>Дисплей: OLED<br>Ерекшеліктері: Алғашқы үлгі, базалық фитнес бақылау</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_1.html"><img src="../../img/applew1.jpg" align="left"/><h2>Apple Watch Series 1</h2><h4>Дисплей: OLED<br>Ерекшеліктері: Жылдам процессор, қолжетімді нұсқа</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_2.html"><img src="../../img/applew2.jpg" align="left"/><h2>Apple Watch Series 2</h2><h4>Дисплей: OLED<br>Ерекшеліктері: GPS модулі, су өтпейтін корпус</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_3.html"><img src="../../img/applew3.jpg" align="left"/><h2>Apple Watch Series 3</h2><h4>Дисплей: OLED<br>Ерекшеліктері: LTE қолдауы, жақсартылған өнімділік</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_4.html"><img src="../../img/applew4.jpg" align="left"/><h2>Apple Watch Series 4</h2><h4>Дисплей: Үлкейтілген шетсіз OLED<br>Ерекшеліктері: ЭКГ, құлау анықтау</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_5.html"><img src="../../img/applew5.png" align="left"/><h2>Apple Watch Series 5</h2><h4>Дисплей: Әрдайым қосулы Retina<br>Ерекшеліктері: Компас, халықаралық төтенше қоңыраулар</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_6.html"><img src="../../img/applew6.jpg" align="left"/><h2>Apple Watch Series 6</h2><h4>Дисплей: Әрдайым қосулы Retina<br>Ерекшеліктері: Қан оттегін өлшеу, жылдам қуаттау</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_7.html"><img src="../../img/applew7.jpg" align="left"/><h2>Apple Watch Series 7</h2><h4>Дисплей: Үлкен шетсіз дисплей<br>Ерекшеліктері: Жылдам қуаттау, сынуға төзімді экран</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_8.html"><img src="../../img/applew8.jpg" align="left"/><h2>Apple Watch Series 8</h2><h4>Дисплей: Әрдайым қосулы Retina<br>Ерекшеліктері: Температураны өлшеу, апат анықтау</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_9.html"><img src="../../img/applew9.jpg" align="left"/><h2>Apple Watch Series 9</h2><h4>Дисплей: Жарқын әрдайым қосулы Retina<br>Ерекшеліктері: Қос түрту қимылы, құрылғыдағы Siri</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_series_10.html"><img src="../../img/applew10.jpg" align="left"/><h2>Apple Watch Series 10</h2><h4>Дисплей: Анықталуда<br>Ерекшеліктері: Соңғы жаңартулар мен мүмкіндіктер</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_se_1st.html"><img src="../../img/applewse1.jpg" align="left"/><h2>Apple Watch SE (1-буын)</h2><h4>Дисплей: Retina<br>Ерекшеліктері: Бюджеттік модель, негізгі функциялар</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_se_2nd.html"><img src="../../img/applewse2.jpg" align="left"/><h2>Apple Watch SE (2-буын)</h2><h4>Дисплей: Retina<br>Ерекшеліктері: Жақсартылған өнімділік, отбасы режимі</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_ultra.html"><img src="../../img/applewul1.jpg" align="left"/><h2>Apple Watch Ultra</h2><h4>Дисплей: Тегіс сапфир кристал<br>Ерекшеліктері: Берік құрылым, экстремалды спортқа дайын</h4></button></li>
+            <li><button class="maindiv1" data-url="apple_watch_ultra_2.html"><img src="../../img/applewul2.jpg" align="left"/><h2>Apple Watch Ultra 2</h2><h4>Дисплей: Ең жарық дисплей<br>Ерекшеліктері: S9 чипі, жетілдірілген GPS</h4></button></li>
+        </ul>
+    </div>
+    <script>
+        const button = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    </script>
+     <script>
+        const buttons = 
+            document.querySelectorAll('.maindiv1').forEach(button => {
+            button.addEventListener('click', () => {
+                const url = button.dataset.url;
+                window.location.href = url;
+            });
+        });
+
+        function searchName() {
+                    const query = document.getElementById("searchInput").value.trim();
+                    if (!query) return;
+                
+                    const regex = new RegExp(`(${query})`, "gi");
+                    const items = document.querySelectorAll("#nameList li");
+                    let firstMatch = null;
+                
+                    items.forEach(item => {
+                      removeHighlights(item);
+                      const matched = highlightMatches(item, regex);
+                      if (matched && !firstMatch) {
+                        firstMatch = item;
+                      }
+                    });
+                
+                    if (firstMatch) {
+                      firstMatch.scrollIntoView({ behavior: "smooth", block: "center" });
+                    }
+                  }
+                
+                  function removeHighlights(element) {
+                    const spans = element.querySelectorAll("span.highlight");
+                    spans.forEach(span => {
+                      span.replaceWith(span.textContent);
+                    });
+                  }
+                
+                  function highlightMatches(node, regex) {
+                    let found = false;
+                
+                    if (node.nodeType === Node.TEXT_NODE) {
+                      const match = node.textContent.match(regex);
+                      if (match) {
+                        const span = document.createElement("span");
+                        span.innerHTML = node.textContent.replace(regex, `<span class="highlight">$1</span>`);
+                        node.replaceWith(...span.childNodes);
+                        found = true;
+                      }
+                    }
+                    else if (node.nodeType === Node.ELEMENT_NODE && node.childNodes.length) {
+                      node.childNodes.forEach(child => {
+                        if (highlightMatches(child, regex)) {
+                          found = true;
+                        }
+                      });
+                    }
+                
+                    return found;
+                  }
+        </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="kz.mac.html">Артқа</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Mac Studio сериясы</h2>
+    <img src="../../img/macstudio.png" alt="Mac Studio суреті" />
+    <h3>Тарихы</h3>
+    <h1>Mac Studio — Компактты дизайндағы қуат</h1>
+
+    <section>
+      <h2>Анонстар мен шығу күндері</h2>
+      <ul>
+        <li><strong>Алғашқы Mac Studio:</strong> 8 наурыз 2022 жыл</li>
+        <li><strong>Mac Studio (M1 Ultra):</strong> 8 наурыз 2022 жыл</li>
+        <li><strong>Mac Studio (M2 Ultra):</strong> 5 маусым 2023 жыл</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Негізгі ерекшеліктері</h2>
+      <ul>
+        <li>Apple M1 және M2 Ultra чиптері</li>
+        <li>128 ГБ дейінгі біріктірілген жадты қолдау</li>
+        <li>4K, 5K және 6K дисплейлерді қолдау</li>
+        <li>Компактты және тыныш дизайн</li>
+        <li>Thunderbolt 4 және USB-C порттарының көптігі</li>
+        <li>8 ТБ дейінгі сақтау мүмкіндігі</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Өнімділік және қолдану салалары</h2>
+      <p>Mac Studio шығармашылық салаларындағы мамандар үшін арналған. Ол бейнемазмұнды өңдеу, 3D модельдеу, музыкалық өндіріс және бағдарламалық қамтамасыз ету сияқты жоғары жүктемелерді орындауға арналған. Ол ықшам пішінде жоғары өнімділікті ұсынады, ең ауыр тапсырмаларды орындауға арналған жұмыс станциясын қамтамасыз етеді.</p>
+    </section>
+
+    <section>
+      <h2>Пікірлер мен танымалдылық</h2>
+      <p>Mac Studio оның өлшеміне қарамастан, ерекше қуаты мен өнімділігі үшін жоғары бағаланады. Ол контент жасаушылар, дизайнерлер және кәсіби мамандар үшін қуатты есептеу мүмкіндіктерін ұсынатын үздік таңдау болып табылады.</p>
+    </section>
+
+    <section>
+      <h2>Қораптағы заттар мен аксессуарлар</h2>
+      <ul>
+        <li>Қорапта: Mac Studio, қуат кабелі</li>
+        <li>Қосымша: Apple Display, Magic Mouse, Magic Keyboard</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, мазмұн, код, визуалды дизайн.</h3>
+    <h3>Ақпарат көзі — Apple Inc.</h3>
+    <h3>Назар аударғандарыңыз үшін рахмет!</h3>
+  </div>
+
+  <footer>
+    <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Мекенжай: Ш.Муртаза Гимназиясы</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="kz.mac.html">Артқа</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>Mac Mini сериясы</h2>
+    <img src="../../img/macmini.jpg" alt="Mac Mini суреті" />
+    <h3>Тарихы</h3>
+    <h1>Mac Mini — Компактты қуат</h1>
+
+    <section>
+      <h2>Анонстар және шығу күндері</h2>
+      <ul>
+        <li><strong>Алғашқы Mac Mini:</strong> 11 қаңтар 2005 жыл</li>
+        <li><strong>Mac Mini (Intel):</strong> 1 наурыз 2006 жыл</li>
+        <li><strong>Mac Mini (M1):</strong> 10 қараша 2020 жыл</li>
+        <li><strong>Mac Mini (M2):</strong> 17 қаңтар 2023 жыл</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Негізгі ерекшеліктері</h2>
+      <ul>
+        <li>Apple M1 және M2 чиптері (2020 және 2023 жылғы модельдер үшін)</li>
+        <li>Компактты дизайн (7.7 дюйм x 1.4 дюйм)</li>
+        <li>64 ГБ дейінгі ЖЖҚ және 2 ТБ SSD сақтау орны</li>
+        <li>Thunderbolt / USB 4, HDMI 2.0, Gigabit Ethernet порттары</li>
+        <li>3 дисплейге дейін қолдау (M1 моделіне арналған)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Өнімділік және қолдану жағдайлары</h2>
+      <p>Mac Mini — шағын және қуатты құрылғы, үй пайдаланушылары, кәсіпқойлар және әзірлеушілер үшін күшті өнімділікке ие, бірақ өте кішкентай түрінде.</p>
+    </section>
+
+    <section>
+      <h2>Пікірлер және танымалдылық</h2>
+      <p>Кішкентай өлшемдегі өте жоғары өнімділігі үшін танымал, Mac Mini пайдаланушылар арасында қуатты жұмыс үстелі компьютері ретінде танылған.</p>
+    </section>
+
+    <section>
+      <h2>Қораптағы заттар мен аксессуарлар</h2>
+      <ul>
+        <li>Қорапта: Mac Mini, қуат кабелі</li>
+        <li>Қосымша: Клавиатура, Тышқан, сыртқы сақтау құрылғылары, мониторлар</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторы</h2>
+    <h3>FujiTeam — идея, мазмұн, код, визуалды дизайн.</h3>
+    <h3>Ақпарат көзі — Apple Inc.</h3>
+    <h3>Назар аударғандарыңыз үшін рахмет!</h3>
+  </div>
+
+  <footer>
+    <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Мекенжай: Ш.Муртаза атындағы гимназия мектебі</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

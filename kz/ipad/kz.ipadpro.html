@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="kz.ipad.html">Артқа</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>iPad Pro сериясы</h2>
+    <img src="../../img/iPad_Pro_12.9.jpg" alt="iPad Pro суреті" />
+    <h3>Тарихы</h3>
+    <h1>iPad Pro — Кәсіби планшеттің эволюциясы</h1>
+
+    <section>
+      <h2>Анонстар мен шығу күндері</h2>
+      <ul>
+        <li><strong>iPad Pro (1-ші буын):</strong> 9 қыркүйек 2015</li>
+        <li><strong>iPad Pro (2-ші буын):</strong> 5 маусым 2017</li>
+        <li><strong>iPad Pro (3-ші буын):</strong> 30 қазан 2018</li>
+        <li><strong>iPad Pro (4-ші буын):</strong> 18 наурыз 2020</li>
+        <li><strong>iPad Pro (5-ші буын):</strong> 20 сәуір 2021</li>
+        <li><strong>iPad Pro (6-шы буын):</strong> 26 қазан 2022</li>
+        <li><strong>iPad Pro (7-ші буын):</strong> 15 мамыр 2024</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Негізгі ерекшеліктер</h2>
+      <ul>
+        <li>Apple M4 чипі: 10 ядролы CPU және GPU</li>
+        <li>OLED Ultra Retina XDR дисплей, 1600 нитке дейін</li>
+        <li>Apple Pencil Pro және Magic Keyboard қолдауы</li>
+        <li>USB-C Thunderbolt 3 қосылымы</li>
+        <li>Жад: 256 ГБ / 512 ГБ / 1 ТБ / 2 ТБ</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Модельдерді салыстыру</h2>
+      <ul>
+        <li><strong>11 дюймдік:</strong> Компактты және жеңіл</li>
+        <li><strong>13 дюймдік:</strong> Креатив үшін үлкен экран</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Пікірлер мен қабылдау</h2>
+      <p>iPad Pro жоғары өнімділігі мен кәсіби мүмкіндіктері үшін мақталады. Бұл дизайнерлер, музыканттар, инженерлер және кәсіпкерлер үшін толыққанды құрал.</p>
+    </section>
+
+    <section>
+      <h2>Жабдықтау және аксессуарлар</h2>
+      <ul>
+        <li>Жабдықта: iPad Pro, USB-C кабелі, адаптер</li>
+        <li>Қосымша: Apple Pencil Pro, Magic Keyboard</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторлар</h2>
+    <h3>FujiTeam — концепция, дизайн, әзірлеу, мәтін.</h3>
+    <h3>Дереккөз — Apple Inc.</h3>
+    <h3>Назар аударғаныңызға рахмет!</h3>
+  </div>
+
+  <footer>
+    <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Мекенжай: Ш.Муртаза атындағы мектеп-гимназия</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>

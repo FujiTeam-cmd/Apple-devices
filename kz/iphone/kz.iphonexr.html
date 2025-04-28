@@ -1,0 +1,160 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+    body {
+        font-family: monospace;
+        background-color: #f3f3f3;
+        color: #222;
+        font-size: 16px;
+    } 
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+        margin-bottom: 3px;
+    }
+    img {
+        border-radius: 15px;
+        width: 25%;
+        height: auto;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+    }
+
+    .head {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+    }
+
+    .maindiv {
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+
+    .ip16 {
+        border-radius: 15px;
+        height: auto;
+        width: 100%;
+    }
+
+    #menu {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border: 1px solid #ccc;
+        width: 150px;
+        position: absolute;
+        margin-top: 5px;
+        border-radius: 15px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        left: 43%;
+    }
+
+    img {
+        border-radius: 15px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        border-radius: 15px;
+    }
+    </style>
+</head>
+<body>
+    <div class="header-section">
+        <header>
+            <div class="head">   
+                <button class="text-btn" data-url="kz.iphone.html">Артқа</button>
+            </div>
+        </header>
+    </div><!-- BTN BAR -->
+    <div class="maindiv">
+        <h2>iPhone XR сериясы</h2>
+        <img src="../../img/iphone_xr.jpg" />
+        <h4 align="right"></h4>
+        <h3>Тарихы</h3>
+        <h1>iPhone XR жасау тарихы</h1>
+    
+        <section>
+            <h2>Жариялануы және шығу күні</h2>
+            <ul>
+                <li><strong>Жариялау:</strong> 2018 жылғы 12 қыркүйек, Стив Джобс театры</li>
+                <li><strong>Шығу күні:</strong> 2018 жылғы 26 қазан</li>
+                <li><strong>Басты баяндамашылар:</strong> Тим Кук, Фил Шиллер</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Модель сипаттамасы</h2>
+            <ul>
+                <li>6.1" Liquid Retina LCD дисплей</li>
+                <li>12MP жалғыз камера</li>
+                <li>A12 Bionic процессоры</li>
+                <li>Face ID технологиясы</li>
+                <li>6 түрлі түс: қызыл, қызғылт, көк, қара, ақ, сары</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Негізгі ерекшеліктері</h2>
+            <ul>
+                <li>XS үлгісіне қарағанда қолжетімді нұсқа</li>
+                <li>Ұзақ батарея жұмысы</li>
+                <li>IP67 деңгейлі су мен шаңнан қорғаныс</li>
+            </ul>
+        </section>
+    
+        <section>
+            <h2>Пікірлер мен бағалар</h2>
+            <p>XR өнімділігі мен автономдылығы үшін мақталды, бірақ OLED дисплей болмағаны сынға ұшырады.</p>
+        </section>
+    
+        <section>
+            <h2>Қораптағы заттар</h2>
+            <ul>
+                <li>iPhone XR, Lightning кабелі, қуат адаптері, EarPods</li>
+                <li>Қосымша: қаптар, сымсыз қуаттағыштар</li>
+            </ul>
+        </section>
+    </div>
+   
+    <div class="maindiv" style="height: 200px;"><h2>Кредит</h2><h3>FujiTeam-FujiTeam-концепт, дизайн, жазу, әзірлеу, кодтау, техникалық қолдау.</h3><h3>Дереккөз-Apple Corporation</h3><h3>Қолдауыңызға рахмет!</h3></div><!-- AUTHORS -->
+    <footer><p>Бізбен хабарласыңыз: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+        <p>Телефон нөмірі: +8 776 848 2309</p>
+        <p>Мекенжай:Шерхан Мұртаза атындағы мектеп-гимназиясы</p></footer><!-- FOOTER -->
+    <script>
+        const buttons = 
+    document.querySelectorAll('.text-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const url = button.dataset.url;
+            window.location.href = url;
+        });
+    });
+    function search() {
+      const query = document.getElementById("search").value;
+      alert("Поиск: " + query);
+    }
+    </script>
+</body>
+</html>

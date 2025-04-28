@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: monospace;
+      background-color: #f3f3f3;
+      color: #222;
+      font-size: 16px;
+    }
+    header, footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    .head {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 10px;
+    }
+    button {
+      all: unset;
+      cursor: pointer;
+      border: none;
+      background: transparent;
+    }
+    .maindiv {
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 15px;
+      margin-bottom: 10px;
+    }
+    img {
+      border-radius: 15px;
+      width:25%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-section">
+    <header>
+      <div class="head">
+        <button class="text-btn" data-url="kz.mac.html">Артқа</button>
+      </div>
+    </header>
+  </div>
+
+  <div class="maindiv">
+    <h2>MacBook Air сериясы</h2>
+    <img src="../../img/macbookair.jpeg" alt="MacBook Air суреті" />
+    <h3>Тарихы</h3>
+    <h1>MacBook Air — Жеңілдік пен өнімділік үйлесімі</h1>
+
+    <section>
+      <h2>Анонстар мен шығу күндері</h2>
+      <ul>
+        <li><strong>Алғашқы MacBook Air:</strong> 15 қаңтар 2008</li>
+        <li><strong>MacBook Air (M1):</strong> 10 қараша 2020</li>
+        <li><strong>MacBook Air (M2):</strong> 6 маусым 2022</li>
+        <li><strong>MacBook Air (15 дюйм):</strong> 5 маусым 2023</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Негізгі ерекшеліктері</h2>
+      <ul>
+        <li>Apple M1 және M2 чиптері</li>
+        <li>13 және 15 дюймдік Liquid Retina дисплей</li>
+        <li>MagSafe зарядтау, Thunderbolt / USB 4</li>
+        <li>Жұқа және жеңіл дизайн (1.2 кг дейін)</li>
+        <li>Жұмыс уақыты — 18 сағатқа дейін</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Пайдалануға ыңғайлылығы</h2>
+      <p>MacBook Air — бұл студенттерге, жиі жол жүретіндерге және күнделікті тапсырмалар үшін ең қолайлы ноутбук. Оның жеңілдігі мен қуатты чипі өнімділіктен айырмайды.</p>
+    </section>
+
+    <section>
+      <h2>Пікірлер мен танымалдылық</h2>
+      <p>MacBook Air өзінің тыныш жұмыс істеуі, батареяның ұзақ жұмыс істеуі және сапалы дисплейімен мақтана алады. Қолданушылар бұл құрылғыны ең үйлесімді Apple ноутбугы деп есептейді.</p>
+    </section>
+
+    <section>
+      <h2>Қаптама және аксессуарлар</h2>
+      <ul>
+        <li>Қорапта: MacBook Air, MagSafe кабелі, қуат адаптері</li>
+        <li>Қосымша: Magic Mouse, Magic Keyboard, қаптар</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="maindiv" style="height: 200px;">
+    <h2>Авторлар</h2>
+    <h3>FujiTeam — идея, мәтін, кодтау, визуализация.</h3>
+    <h3>Дереккөз — Apple Inc.</h3>
+    <h3>Назар аударғаныңыз үшін рахмет!</h3>
+  </div>
+
+  <footer>
+    <p>Байланыс: <a href="mailto:rasultlp@mail.ru">rasultlp@mail.ru</a></p>
+    <p>Телефон: +8 776 848 2309</p>
+    <p>Мекенжай: Ш.Мұртаза атындағы мектеп-гимназия</p>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.text-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const url = button.dataset.url;
+        window.location.href = url;
+      });
+    });
+  </script>
+</body>
+</html>
